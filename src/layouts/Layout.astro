@@ -1,5 +1,6 @@
 ---
-import Navbar from '../components/common/Navbar';
+import Footer from "../components/common/Footer.astro";
+import Navbar from "../components/common/Navbar";
 interface Props {
   title: string;
 }
@@ -14,11 +15,16 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@800,900,700,400,500&display=swap"
+      rel="stylesheet"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <Navbar  client:load />
+  <body class="font-switzer">
+    <Navbar client:load />
     <slot />
+    <Footer />
   </body>
 </html>
