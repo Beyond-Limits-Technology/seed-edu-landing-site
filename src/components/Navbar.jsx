@@ -1,7 +1,7 @@
 import navbarData from "../data/navbarData";
 import { Drawer, NavbarItem } from ".";
 import { useState } from "react";
-import useDisableScroll from "../hooks/useDisableScroll";
+// import useDisableScroll from "../hooks/useDisableScroll";
 
 const Navbar = () => {
   const [showDrawer, setShowDrawer] = useState(false);
