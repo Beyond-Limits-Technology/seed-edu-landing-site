@@ -1,0 +1,48 @@
+const NavbarItem = ({ data }) => {
+  return (
+    <div class="h-full flex justify-center items-center">
+      <div class="flex items-center gap-2 py-2 group">
+        <div class="flex items-center gap-2">
+          <a
+            href={data.link}
+            class="text-lg font-[400] uppercase cursor-pointer tracking-wider"
+          >
+            {data.name}
+          </a>
+
+          {data.subData.length > 0 && (
+            <img
+              src="/assets/icons/down.png"
+              alt=""
+              class="w-[10px] cursor-pointer"
+            />
+          )}
+        </div>
+
+        {data.subData.length > 0 && (
+          <div class="relative -left-[100%] top-4 ">
+            <div class={`absolute top-0 left-0 `}>
+              <div
+                class={`bg-white rounded-md shadow-2xl  flex-col items-start 
+          overflow-hidden transition-all duration-300 ease-in-out justify-center 
+           min-w-[240px] min-h-[100px] py-4 hidden group-hover:flex`}
+              >
+                {data.subData?.map((data) => (
+                  <a
+                    href={data.link}
+                    class="text-lg !cursor-pointer font-[400] tracking-wide text-black  hover:text-[#F5BB00] transition-all ease-in-out px-4 
+                    h-[40px] flex items-center whitespace-nowrap"
+                  >
+                    {data.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default NavbarItem;
