@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="w-full h-[80px] shadow-md sticky top-0 left-0">
+      <div className="w-full h-[80px] shadow-md sticky top-0 left-0 z-[100] bg-white">
         <div className="max-w-7xl mx-auto h-full  flex justify-between items-center lg:px-2 px-4">
           <div>Logo</div>
 
