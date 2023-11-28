@@ -1,0 +1,22 @@
+---
+import OurTeam from "../../components/aboutus/OurTeam.astro";
+import Testimonials from "../../components/aboutus/Testimonials.astro";
+import Breadcrumb from "../../components/common/Breadcrumb.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Our Team">
+  <div class="relative max-h-2/3 h-screen overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center bg-about-hero"></div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+    >
+      <h1 class="text-7xl font-bold">About Us</h1>
+      <Breadcrumb routeName="About Us" link="about-us" />
+      <p class="text-lg mt-6">Empowering your Dreams towards a Bright Future</p>
+    </div>
+  </div>
+  <Testimonials />
+  <OurTeam />
+</Layout>
