@@ -1,4 +1,4 @@
-import navbarData from "../data/navbarData";
+import navbarData from "../../data/navbarData";
 import { Drawer, NavbarItem } from ".";
 import { useState } from "react";
 // import useDisableScroll from "../hooks/useDisableScroll";

@@ -13,7 +13,7 @@ const DrawerItem = ({ data }) => {
       >
         <a
           href={data.link}
-          class="text-lg font-[400] uppercase cursor-pointer tracking-wider"
+          className="text-lg font-[400] uppercase cursor-pointer tracking-wider"
         >
           {data.name}
         </a>
@@ -22,7 +22,7 @@ const DrawerItem = ({ data }) => {
           <img
             src="/assets/icons/down.png"
             alt=""
-            class="w-[10px] cursor-pointer"
+            className="w-[10px] cursor-pointer"
           />
         )}
       </button>
@@ -38,7 +38,7 @@ const DrawerItem = ({ data }) => {
               <a
                 key={data.name}
                 href={data.link}
-                class="text-lg !cursor-pointer font-[400] tracking-wide text-black transition-all ease-in-out h-[50px] flex items-center whitespace-nowrap
+                className="text-lg !cursor-pointer font-[400] tracking-wide text-black transition-all ease-in-out h-[50px] flex items-center whitespace-nowrap
              sm:pl-8 pl-4"
               >
                 {data.name}
