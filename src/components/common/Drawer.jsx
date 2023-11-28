@@ -1,4 +1,4 @@
-import { DrawerItem } from ".";
+import DrawerItem from "./DrawerItem";
 import navbarData from "../../data/navbarData";
 
 const Drawer = ({ showDrawer, setShowDrawer }) => {

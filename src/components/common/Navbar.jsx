@@ -1,6 +1,8 @@
-import navbarData from "../../data/navbarData";
-import { Drawer, NavbarItem } from ".";
 import { useState } from "react";
+
+import navbarData from "../../data/navbarData";
+import NavbarItem from "./NavbarItem";
+import Drawer from "./Drawer";
 // import useDisableScroll from "../hooks/useDisableScroll";
 
 const Navbar = () => {
