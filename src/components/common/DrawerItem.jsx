@@ -8,7 +8,7 @@ const DrawerItem = ({ data }) => {
       <button
         onClick={() => setActive((prev) => !prev)}
         className={`w-full min-h-[60px] px-4 flex justify-between items-center hover:bg-gray-50 ${
-          active ? "bg-gray-50" : "bg-white"
+          active ? "bg-gray-200" : "bg-white"
         }`}
       >
         <a
