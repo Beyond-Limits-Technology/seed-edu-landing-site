@@ -1,0 +1,23 @@
+---
+import CompoundAccordionCards from "./CompoundAccordionCards";
+---
+
+<div class="w-screen flex flex-col items-center justify-center my-12">
+  <h5 class="text-3xl text-center font-semibold text-primary-500">
+    You have questions. We have answers.
+  </h5>
+  <div class="flex flex-col md:flex-row w-full gap-2 mt-12">
+    <div
+      class="flex-[0.5] h-[50vh] bg-cover bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]"
+    >
+    </div>
+    <div class="flex-[0.5] px-10">
+      <CompoundAccordionCards client:visible />
+      <div class="mt-4">
+        <a href="/faqs" rel="nofollow" class="text-blue-600 hover:underline"
+          >More FAQs</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
