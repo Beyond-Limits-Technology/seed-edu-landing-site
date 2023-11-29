@@ -17,13 +17,25 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
 
           <button
             onClick={() => setShowDrawer(false)}
-            className="w-[30px] h-[30px] rounded-md bg-red-600 sm:hidden flex justify-center p-[6px] items-center"
+            className="min-w-[30px] h-[30px] rounded-full sm:hidden flex justify-center items-center text-red-600 pr-2"
           >
-            <img
-              src="/assets/icons/cross.png"
-              alt="cross"
-              className="w-full object-cover"
-            />
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_429_11083)">
+                <path
+                  d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
           </button>
         </div>
 

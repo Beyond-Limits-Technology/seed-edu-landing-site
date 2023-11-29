@@ -9,7 +9,20 @@ export default [
       },
       {
         name: "About Us",
-        link: "/about-us",
+        subData: [
+          {
+            name: "Our Team",
+            link: "",
+          },
+          {
+            name: "Testimonials",
+            link: "",
+          },
+          {
+            name: "Privacy Policy",
+            link: "/privacy-policy",
+          },
+        ],
       },
       {
         name: "Contact Us",
@@ -59,6 +72,10 @@ export default [
         name: "Study In Uk",
         link: "/about-us",
       },
+      {
+        name: "Study In USA",
+        link: "/about-us",
+      },
     ],
   },
   {
@@ -66,7 +83,7 @@ export default [
     link: undefined,
     subData: [
       {
-        name: "Oversea Student Health Cover (OHSC)",
+        name: "Oversea Student Health Cover (OSHC)",
         link: "/our-service",
       },
       {
@@ -88,7 +105,7 @@ export default [
     link: undefined,
     subData: [
       {
-        name: "FAQS & Events",
+        name: "FAQs & Events",
         link: "/our-service",
       },
       {
