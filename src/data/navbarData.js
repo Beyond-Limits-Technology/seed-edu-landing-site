@@ -61,7 +61,7 @@ export default [
     ],
   },
   {
-    name: "Studies Abroad",
+    name: "Study Abroad",
     link: undefined,
     subData: [
       {
