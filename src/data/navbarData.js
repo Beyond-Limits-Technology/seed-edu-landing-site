@@ -101,7 +101,7 @@ export default [
     ],
   },
   {
-    name: "FAQS",
+    name: "Updates",
     link: undefined,
     subData: [
       {
