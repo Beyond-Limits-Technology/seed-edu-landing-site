@@ -1,4 +1,5 @@
 import { useState } from "react";
+import DrawerNestedItem from "./DrawerNestedItem";
 
 const DrawerItem = ({ data }) => {
   const [active, setActive] = useState(false);
@@ -35,14 +36,7 @@ const DrawerItem = ({ data }) => {
             }`}
           >
             {data.subData?.map((data) => (
-              <a
-                key={data.name}
-                href={data.link}
-                className="text-lg !cursor-pointer font-[400] tracking-wide text-black transition-all ease-in-out h-[50px] flex items-center whitespace-nowrap
-             sm:pl-8 pl-4"
-              >
-                {data.name}
-              </a>
+              <DrawerNestedItem key={data.name} data={data} />
             ))}
           </div>
         </div>
