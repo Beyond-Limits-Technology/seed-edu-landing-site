@@ -1,0 +1,23 @@
+---
+import WhySeedCard from "./WhySeedCard.astro";
+import whySeedData from "../../data/whySeedData";
+---
+
+<div class="w-screen flex flex-col items-center justify-center">
+  <div>
+    <h5 class="text-3xl text-center font-semibold">Why Seed?</h5>
+    <div>
+      <p class="text-center max-w-xl mt-2 mb-4 text-gray-600 px-4">
+        At Seed, we recognize the pivotal choice in education that shapes a
+        successful future. Students trust us for expert educational guidance.
+      </p>
+    </div>
+  </div>
+  <div class="flex flex-col md:flex-row gap-1 md:gap-2">
+    {
+      whySeedData.map((wsd) => (
+        <WhySeedCard title={wsd.title} info={wsd.info} />
+      ))
+    }
+  </div>
+</div>
