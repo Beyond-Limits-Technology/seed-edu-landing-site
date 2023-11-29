@@ -7,7 +7,7 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`sm:w-[500px] w-full h-screen fixed top-0 left-0 overflow-y-auto bg-white shadow-md flex flex-col items-start py-4 ${
-          showDrawer ? "translate-x-0" : "-translate-x-[100%]"
+          showDrawer ? "translate-x-0" : "-translate-x-[100%] "
         } transition-all duration-300 ease-in-out z-[100]`}
       >
         <div className="flex justify-between items-center px-2 w-full">
