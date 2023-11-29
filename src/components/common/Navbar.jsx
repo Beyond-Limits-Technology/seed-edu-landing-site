@@ -16,10 +16,20 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto h-full  flex justify-between items-center lg:px-2 px-4">
           <div>Logo</div>
 
-          <div className="h-full lg:flex hidden items-center xl:gap-8 gap-4">
+          <div className="h-full lg:flex hidden items-center xl:gap-4 gap-4">
             {navbarData.map((data) => (
               <NavbarItem key={data.name} data={data} />
             ))}
+
+            <div className="w-auto h-auto bg-black">
+              <button
+                onClick={() => window.open("/appointment", "_self")}
+                className="px-8 py-3 bg-blue-700 text-white uppercase translate-x-[6px] -translate-y-[6px] hover:translate-x-[3px] hover:-translate-y-[3px]
+                active:translate-x-[0px] active:-translate-y-[0px] transition-all duration-300 ease-in-out"
+              >
+                Appointment
+              </button>
+            </div>
           </div>
 
           <button
