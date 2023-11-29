@@ -31,7 +31,7 @@ const DrawerItem = ({ data }) => {
       {data?.subData?.length > 0 && (
         <div className="w-full bg-gray-50  sm:pl-10 pl-6">
           <div
-            className={`w-full flex flex-col border-l overflow-hidden border-black border-opacity-10 ${
+            className={`w-full flex flex-col border-l  overflow-hidden border-black border-opacity-10 ${
               active ? "min-h-[50px]" : "h-0"
             }`}
           >

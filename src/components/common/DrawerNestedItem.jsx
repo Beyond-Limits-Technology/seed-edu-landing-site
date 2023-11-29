@@ -7,12 +7,12 @@ const DrawerNestedItem = ({ data }) => {
     <>
       <button
         onClick={() => setActive((prev) => !prev)}
-        className={`w-full min-h-[60px] flex justify-between items-center pr-3`}
+        className={`w-full flex justify-between items-center pr-3`}
       >
         <a
           key={data.name}
           href={data.link}
-          className="text-lg !cursor-pointer font-[400] tracking-wide text-black transition-all ease-in-out h-[50px] flex items-center whitespace-nowrap
+          className="text-lg !cursor-pointer font-[400] w-full tracking-wide text-black transition-all ease-in-out h-[50px] flex items-center whitespace-nowrap
              sm:pl-8 pl-4"
         >
           {data.name}

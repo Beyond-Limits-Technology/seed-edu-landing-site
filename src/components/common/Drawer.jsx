@@ -7,7 +7,7 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
       <div
         onClick={(e) => e.stopPropagation()}
         className={`sm:w-[500px] w-full h-screen fixed top-0 left-0 overflow-y-auto bg-white shadow-md flex flex-col items-start py-4 ${
-          showDrawer ? "translate-x-0" : "-translate-x-[100%]"
+          showDrawer ? "translate-x-0" : "-translate-x-[100%] "
         } transition-all duration-300 ease-in-out z-[100]`}
       >
         <div className="flex justify-between items-center px-2 w-full">
@@ -26,13 +26,13 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_429_11083)">
+              <g clipPath="url(#clip0_429_11083)">
                 <path
                   d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006"
                   stroke="currentColor"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
             </svg>

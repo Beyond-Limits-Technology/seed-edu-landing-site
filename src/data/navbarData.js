@@ -66,15 +66,15 @@ export default [
     subData: [
       {
         name: "Study In Australia",
-        link: "/our-service",
+        link: "/study-in-australia",
       },
       {
-        name: "Study In Uk",
-        link: "/about-us",
+        name: "Study In UK",
+        link: "/study-in-uk",
       },
       {
         name: "Study In USA",
-        link: "/about-us",
+        link: "/study-in-usa",
       },
     ],
   },
@@ -121,11 +121,6 @@ export default [
   {
     name: "Scholarships",
     link: "/scholarships",
-    subData: [],
-  },
-  {
-    name: "Appointment",
-    link: "/appointment",
     subData: [],
   },
 ];
