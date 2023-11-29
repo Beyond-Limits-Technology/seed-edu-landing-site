@@ -105,11 +105,15 @@ export default [
     link: undefined,
     subData: [
       {
-        name: "FAQs & Events",
+        name: "News & Blogs",
+        link: "/about-us",
+      },
+      {
+        name: "FAQs",
         link: "/our-service",
       },
       {
-        name: "News & Blog Updates",
+        name: "Events",
         link: "/about-us",
       },
     ],
