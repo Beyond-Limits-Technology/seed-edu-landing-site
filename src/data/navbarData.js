@@ -9,14 +9,15 @@ export default [
       },
       {
         name: "About Us",
+        link: "/about-us",
         subData: [
           {
             name: "Our Team",
-            link: "",
+            link: "/about-us#our-team",
           },
           {
             name: "Testimonials",
-            link: "",
+            link: "/about-us#testimonials",
           },
           {
             name: "Privacy Policy",
@@ -84,15 +85,15 @@ export default [
     subData: [
       {
         name: "Oversea Student Health Cover (OSHC)",
-        link: "/our-service",
+        link: "/essentials/oversea-student-health-cover",
       },
       {
         name: "Student Accommodation",
-        link: "/about-us",
+        link: "/essentials/student-accommodation",
       },
       {
         name: "Student Banking",
-        link: "/our-service",
+        link: "/essentials/student-banking",
       },
       {
         name: "Money Transfer",
