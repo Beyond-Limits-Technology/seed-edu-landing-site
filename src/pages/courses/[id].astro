@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import Content from "../../components/courses/Content.astro"
+
+ export const getStaticPaths = (() => {
+    
+    return [
+        {params: {id: 1}}
+    ];
+})
+
+const {id} = Astro.params
+
+---
+
+<Layout title={`SEED | Course Detail - ${id}`}>
+    <Content />
+</Layout>
