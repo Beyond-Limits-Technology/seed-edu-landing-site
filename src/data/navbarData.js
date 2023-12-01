@@ -110,7 +110,7 @@ export default [
       },
       {
         name: "FAQs",
-        link: "/our-service",
+        link: "/faqs",
       },
       {
         name: "Events",
