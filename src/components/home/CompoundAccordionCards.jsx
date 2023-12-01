@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AccordionCard from "./AccordionCard";
+import AccordionCard from "../common/AccordionCard";
 
 const CompoundAccordionCard = () => {
   const [show, setShow] = useState(1);
