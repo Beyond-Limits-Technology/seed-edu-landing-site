@@ -107,6 +107,10 @@ export default [
     subData: [
       {
         name: "News & Blogs",
+        link: "/updates/news-blogs",
+      },
+      {
+        name: "Money Transfer",
         link: "/about-us",
       },
       {
