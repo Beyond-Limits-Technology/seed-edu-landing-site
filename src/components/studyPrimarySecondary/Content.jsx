@@ -10,7 +10,7 @@ const Content = () => {
         <img
           src="https://images.pexels.com/photos/5427659/pexels-photo-5427659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="study-primary-secondary"
-          className="w-full"
+          className="w-full h-[500px] object-cover"
         />
       </div>
       <div className="flex items-center gap-4 border-l-[4px] border-gray-600 border-opacity-30 py-4 pl-4">
