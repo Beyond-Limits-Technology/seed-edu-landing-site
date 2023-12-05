@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro"
+import Content from "../components/scholarships/Content.astro";
+---
+
+<Layout title="SEED | Scholarships">
+   <div class="relative h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://www.nationsonline.org/gallery/UK/Palace-of-Westminster-Parliament.jpg')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-50"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+    >
+      <h1 class="sm:text-7xl text-center text-4xl font-bold">Scholarships</h1>
+      <Breadcrumb routeName="Scholarships" link="scholarships" />
+      <p class="sm:text-lg text-base mt-6 text-center">Empowering your Dreams towards a Bright Future</p>
+    </div>
+  </div>
+
+  <Content />
+</Layout>
