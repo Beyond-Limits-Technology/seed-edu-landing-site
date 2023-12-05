@@ -3,10 +3,10 @@ import Footer from "../components/common/Footer.astro";
 import Navbar from "../components/common/Navbar";
 interface Props {
   title: string;
-  active?: boolean
+  isNavbarActive?: boolean
 }
 
-const { title, active = false } = Astro.props;
+const { title, isNavbarActive = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,7 +24,7 @@ const { title, active = false } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-switzer">
-    <Navbar client:only active={active}/>
+    <Navbar client:only active={isNavbarActive}/>
     <slot />
     <Footer />
   </body>
