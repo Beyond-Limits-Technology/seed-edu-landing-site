@@ -1,0 +1,65 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section class="">
+  <!-- Container -->
+  <div
+    class="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-16"
+  >
+    <h2 class="text-3xl font-bold">
+      Assist Student Visa Application: Your Gateway to Studying in Australia
+    </h2>
+    <p
+      class="mx-auto mb-8 mt-4 max-w-sm md:max-w-3xl text-base text-[#636262] md:mb-12 md:text-lg lg:mb-16"
+    >
+      Navigating the complexities of the student visa application process is a
+      crucial step, and at Seed Education, our trained team is here to guide you
+      through every stage. We understand the latest updates in the application
+      process and are committed to explaining the step-by-step procedure to
+      ensure a seamless application experience for your studies in Australia.
+    </p>
+  </div>
+
+  <div class="pt-8">
+    <!-- Component -->
+    <!--  py-32 md:py-24 lg:py-32 -->
+    <div class="relative">
+      <ServiceCard
+        id={1}
+        stepName="Expert Guidance"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Expert Guidance Sessions"
+        description="Unlock insights into courses, colleges, budgeting, and ideal study locations."
+        features={[
+          "Personalized Sessions: Receive one-on-one guidance based on your unique aspirations.",
+          "Flexible Communication: Choose between online consultations or visit our Melbourne office for prompt responses.",
+        ]}
+      />
+
+      <ServiceCard
+        id={2}
+        stepName="In-Depth Exploration"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="In-Depth Exploration"
+        description="Unlock detailed insights into potential programs, institutions, and budget considerations."
+        features={[
+          "Comprehensive Guidance: Our counsellors delve into the specifics of your academic goals.",
+          "Clear Communication: Understand the nuances of your academic journey through transparent discussions.",
+        ]}
+      />
+
+      <ServiceCard
+        id={3}
+        stepName="Decision Support"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Decision Support"
+        description="Empower yourself with the right information to make informed decisions for your education."
+        features={[
+          "Doubt Clearance: Dedicated counsellors resolve any uncertainties you may have.",
+          "Education Journey Planning: Collaborate with us to chart the path to your academic success.",
+        ]}
+      />
+    </div>
+  </div>
+</section>
