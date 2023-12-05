@@ -3,10 +3,10 @@ import Footer from "../components/common/Footer.astro";
 import Navbar from "../components/common/Navbar";
 interface Props {
   title: string;
+  isNavbarActive?: boolean
 }
 
-const { title } = Astro.props;
-const pathname = Astro.url.pathname
+const { title, isNavbarActive = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,7 +24,7 @@ const pathname = Astro.url.pathname
     <title>{title}</title>
   </head>
   <body class="font-switzer">
-    <Navbar client:only pathname={pathname}/>
+    <Navbar client:only active={isNavbarActive}/>
     <slot />
     <Footer />
   </body>

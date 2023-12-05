@@ -6,17 +6,14 @@ import Drawer from "./Drawer";
 import useScrollOffset from "../../hooks/useScrollOffset";
 // import useDisableScroll from "../hooks/useDisableScroll";
 
-const alwayActivePaths = ["/privacy-policy"];
-
-const Navbar = ({ pathname }) => {
+const Navbar = ({ active }) => {
   const [showDrawer, setShowDrawer] = useState(false);
   const offset = useScrollOffset();
 
-  const isScrollActive = useMemo(() => {
-    if (alwayActivePaths.find((path) => path === pathname)) return true;
-
-    return offset > 0;
-  }, [offset]);
+  const isScrollActive = useMemo(
+    () => (active ? active : offset > 0),
+    [offset]
+  );
 
   // useDisableScroll(setShowDrawer);
 

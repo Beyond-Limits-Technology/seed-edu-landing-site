@@ -99,7 +99,7 @@ export default [
       },
       {
         name: "Events",
-        link: "/about-us",
+        link: "/events",
       },
     ],
   },
