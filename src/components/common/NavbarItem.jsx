@@ -2,7 +2,7 @@ const NavbarItem = ({ data, isScrollActive }) => {
   return (
     <div className="h-full flex justify-center items-center">
       <div className="flex items-center gap-2 py-2 group">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 h-[80px]">
           <a
             href={data.link}
             className={`text-[14px] font-[400] uppercase cursor-pointer tracking-wide ${

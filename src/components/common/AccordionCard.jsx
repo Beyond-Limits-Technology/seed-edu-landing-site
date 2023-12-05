@@ -29,7 +29,7 @@ const AccordionCard = ({ title, answer, index, value, callback }) => {
       {index === value && (
         <div>
           <div className="py-5">
-            <p className="mb-2 text-gray-600">{answer}</p>
+            <div className="mb-2 text-gray-600">{answer}</div>
           </div>
         </div>
       )}
