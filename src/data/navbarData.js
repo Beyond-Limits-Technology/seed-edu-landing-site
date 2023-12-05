@@ -36,28 +36,8 @@ export default [
     link: undefined,
     subData: [
       {
-        name: "Study Primary-Secondary",
-        link: "/our-service",
-      },
-      {
-        name: "Study before B.E.H.S or iGCSE",
-        link: "/about-us",
-      },
-      {
-        name: "Study after B.E.H.S or iGCSE",
-        link: "/contact-us",
-      },
-      {
-        name: "Study after HND/NCC/ABE/SQA",
-        link: "/contact-us",
-      },
-      {
-        name: "Study MBBS",
-        link: "/contact-us",
-      },
-      {
-        name: "Study MBA/MSC",
-        link: "/contact-us",
+        name: "Study In Australia",
+        link: "/study-in-australia",
       },
     ],
   },

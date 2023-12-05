@@ -6,6 +6,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const pathname = Astro.url.pathname
 ---
 
 <!doctype html>
@@ -23,7 +24,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-switzer">
-    <Navbar client:load />
+    <Navbar client:only pathname={pathname}/>
     <slot />
     <Footer />
   </body>
