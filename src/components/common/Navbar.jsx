@@ -24,7 +24,7 @@ const Navbar = ({ active }) => {
           isScrollActive ? "bg-white shadow-md " : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-full  flex justify-between items-center lg:px-2 px-4">
+        <div className="max-w-7xl mx-auto h-full  flex justify-between items-center lg:px-2 px-2">
           <div>Logo</div>
 
           <div className="h-full lg:flex hidden items-center xl:gap-4 gap-4">
@@ -51,11 +51,17 @@ const Navbar = ({ active }) => {
             onClick={() => setShowDrawer(true)}
             className="lg:hidden block"
           >
-            <img
-              src="/assets/icons/menu.png"
-              alt="menu-burger"
-              className="w-[30px]"
-            />
+            <svg
+              className="w-[45px] h-[45px]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke={isScrollActive ? "black" : "white"}
+            >
+              <path d="M5 12H18" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 17H11" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 7H15" stroke-width="2" stroke-linecap="round" />
+            </svg>
           </button>
         </div>
       </div>

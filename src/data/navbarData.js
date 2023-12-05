@@ -37,7 +37,7 @@ export default [
     subData: [
       {
         name: "Study In Australia",
-        link: "/study-in-australia",
+        link: "/guides/study-in-australia",
       },
     ],
   },
