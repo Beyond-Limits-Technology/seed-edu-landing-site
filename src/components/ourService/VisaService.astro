@@ -1,0 +1,73 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+
+const features = [
+  "Setting up your finances prior to arrival at your study destination makes things easier when you get there.",
+  "Some financial institutions offer specialised products or discounts for students.",
+];
+---
+
+<section class="">
+  <!-- Container -->
+
+  <div
+    class="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-16"
+  >
+    <h2 class="text-3xl font-bold">
+      Assist Student Visa Application: Your Gateway to Studying in Australia
+    </h2>
+    <p
+      class="mx-auto mb-8 mt-4 max-w-sm md:max-w-xl lg:max-w-3xl text-base text-[#636262] md:mb-12 md:text-lg lg:mb-16"
+    >
+      Navigating the complexities of the student visa application process is a
+      crucial step, and at Seed Education, our trained team is here to guide you
+      through every stage. We understand the latest updates in the application
+      process and are committed to explaining the step-by-step procedure to
+      ensure a seamless application experience for your studies in Australia.
+    </p>
+  </div>
+  <div class="pt-8">
+    <!-- Component -->
+
+    <div class="relative">
+      <ServiceCard
+        id={4}
+        stepName="Visa Guidance"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Step-by-Step Visa Guidance"
+        description="Navigate the student visa application process with expert assistance and step-by-step guidance."
+        features={[
+          "Certified Counsellors: Our dedicated guides bring years of experience, ensuring accurate and reliable information.",
+          "Financial Planning: Setting up your finances prior to arrival makes your transition smoother.",
+          "Specialized Products: Some financial institutions offer products or discounts tailored for students.",
+        ]}
+      />
+
+      <ServiceCard
+        id={5}
+        stepName="Application Support"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Visa Application Support"
+        description="Ensure you meet all the necessary requirements for a successful student visa application."
+        features={[
+          "Document Verification: Assistance in ensuring your application is complete and accurate.",
+          "Submission Guidance: Expert advice on submitting your application for a smooth process.",
+          "Outcome Assurance: Monitor the progress of your application and receive post-application support.",
+        ]}
+      />
+
+      <ServiceCard
+        id={6}
+        stepName="Outcome Assurance"
+        image="https://images.unsplash.com/photo-1495674817798-4455f189de69?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Visa Outcome Assurance"
+        description="Confidently await your visa outcome with the support of our experienced visa assistance team."
+        features={[
+          "Application Monitoring: Stay informed about the progress of your application.",
+          "Post-application Support: Navigate the post-application period with ease, supported by our team.",
+          "Smooth Transition: Ensure a positive experience abroad with pre-departure and post-arrival sessions.",
+        ]}
+      />
+    </div>
+  </div>
+</section>

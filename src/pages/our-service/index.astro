@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/common/Breadcrumb.astro";
+import Counselling from "../../components/ourService/Counselling.astro";
+import OurServiceHeader from "../../components/ourService/OurServiceHeader.astro";
+import VisaService from "../../components/ourService/VisaService.astro";
+import ServiceCTA from "../../components/ourService/ServiceCTA.astro";
+---
+
+<Layout title="Our Service">
+  <div class="relative h-[350px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-50"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+    >
+      <h1 class="text-3xl lg:text-6xl font-bold text-center">Our Service</h1>
+      <Breadcrumb routeName="Our Service" link="our-service" />
+      <p class="text-lg mt-6 text-center">
+        Empowering your Dreams towards a Bright Future
+      </p>
+    </div>
+  </div>
+
+  <OurServiceHeader />
+  <Counselling />
+  <VisaService />
+  <ServiceCTA />
+</Layout>
