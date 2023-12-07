@@ -36,15 +36,12 @@ const Navbar = ({ active }) => {
               />
             ))}
 
-            <div className="w-auto h-auto bg-black">
-              <button
-                onClick={() => window.open("/appointment", "_self")}
-                className="px-8 py-3 bg-blue-700 text-white uppercase translate-x-[6px] -translate-y-[6px] hover:translate-x-[3px] hover:-translate-y-[3px]
-                active:translate-x-[0px] active:-translate-y-[0px] transition-all duration-300 ease-in-out"
-              >
-                Appointment
-              </button>
-            </div>
+            <button
+              onClick={() => window.open("/appointment", "_self")}
+              className="px-8 py-3 bg-primary-500 hover:bg-primary-600 active:translate-y-[2px] text-white uppercase rounded-full "
+            >
+              Appointment
+            </button>
           </div>
 
           <button
