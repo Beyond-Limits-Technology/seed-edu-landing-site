@@ -12,7 +12,11 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
       >
         <div className="flex justify-between items-center px-2 w-full">
           <div className="w-[200px] min-h-[100px] flex justify-start items-center text-3xl ">
-            Logo
+            <img
+              src="/assets/logos/seed-logo-golden.png"
+              alt="logo"
+              className="w-28 p-2"
+            />
           </div>
 
           <button

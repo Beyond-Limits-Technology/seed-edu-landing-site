@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/common/Breadcrumb.astro";
+import Feature from "../../components/appointment/Features.astro";
+import AppointmentForm from "../../components/appointment/AppointmentForm.jsx";
+---
+
+<Layout title="Appointment | Seed">
+  <div class="relative h-[350px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-50"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+    >
+      <h1 class="text-3xl lg:text-6xl font-bold text-center">Appointment</h1>
+      <Breadcrumb routeName="Appointment" link="appointment" />
+      <p class="text-lg mt-6 text-center">
+        Get expert advice and personalized guidance for your education journey.
+      </p>
+    </div>
+  </div>
+  <Feature />
+  <AppointmentForm />
+</Layout>
