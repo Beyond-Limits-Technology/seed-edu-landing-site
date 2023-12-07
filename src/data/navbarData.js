@@ -1,7 +1,7 @@
 export default [
   {
     name: "Home",
-    link: undefined,
+    link: "/",
     subData: [
       {
         name: "Our Service",
@@ -10,20 +10,20 @@ export default [
       {
         name: "About Us",
         link: "/about-us",
-        subData: [
-          {
-            name: "Our Team",
-            link: "/about-us#our-team",
-          },
-          {
-            name: "Testimonials",
-            link: "/about-us#testimonials",
-          },
-          {
-            name: "Privacy Policy",
-            link: "/privacy-policy",
-          },
-        ],
+        // subData: [
+        //   {
+        //     name: "Our Team",
+        //     link: "/about-us#our-team",
+        //   },
+        //   {
+        //     name: "Testimonials",
+        //     link: "/about-us#testimonials",
+        //   },
+        // {
+        //   name: "Privacy Policy",
+        //   link: "/privacy-policy",
+        // },
+        // ],
       },
       {
         name: "Contact Us",
@@ -75,10 +75,10 @@ export default [
         name: "Student Banking",
         link: "/essentials/student-banking",
       },
-      {
-        name: "Money Transfer",
-        link: "/about-us",
-      },
+      // {
+      //   name: "Money Transfer",
+      //   link: "/about-us",
+      // },
     ],
   },
   {
@@ -89,10 +89,10 @@ export default [
         name: "News & Blogs",
         link: "/updates/news-blogs",
       },
-      {
-        name: "Money Transfer",
-        link: "/about-us",
-      },
+      // {
+      //   name: "Money Transfer",
+      //   link: "/about-us",
+      // },
       {
         name: "FAQs",
         link: "/faqs",
@@ -100,6 +100,10 @@ export default [
       {
         name: "Events",
         link: "/events",
+      },
+      {
+        name: "Privacy Policy",
+        link: "/privacy-policy",
       },
     ],
   },

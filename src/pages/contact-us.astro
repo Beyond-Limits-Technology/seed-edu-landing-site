@@ -1,9 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Contact, Hero } from "../components/contactUs";
+import { Contact, } from "../components/contactUs";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 ---
 
 <Layout title="SEED | Contact Us">
-  <Hero />
+  <div class="relative h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://www.knaufinsulation.com.au/sites/ki_au/files/styles/header_image_wide/public/media/images/Contact-Us-Banner.png?itok=xn2fSP4K')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-50"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+    >
+      <h1 class="text-7xl font-bold">Contact Us</h1>
+      <Breadcrumb routeName="Contact Us" link="contact-us" />
+      <p class="text-lg mt-6 text-center">
+        Empowering your Dreams towards a Bright Future
+      </p>
+    </div>
+  </div>
   <Contact />
 </Layout>
