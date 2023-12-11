@@ -21,7 +21,7 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
 
           <button
             onClick={() => setShowDrawer(false)}
-            className="min-w-[30px] h-[30px] rounded-full sm:hidden flex justify-center items-center text-red-600 pr-2"
+            className="min-w-[30px] h-[30px] rounded-full sm:hidden flex justify-center items-center text-gray-800 pr-2"
           >
             <svg
               width="30px"
@@ -46,6 +46,13 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
         {navbarData?.map((data) => (
           <DrawerItem key={data.name} data={data} />
         ))}
+        <DrawerItem
+          data={{
+            name: "Appointment",
+            link: "/appointment",
+            subData: [],
+          }}
+        />
       </div>
 
       <div
