@@ -1,4 +1,5 @@
 ---
+import studyPlanFees from "../../data/studyPlanFees";
 ---
 
 <div class="max-w-7xl mx-auto md:py-[100px] py-[50px] px-2">
@@ -62,4 +63,35 @@
     </div>
 
          
+
+
+<div class="relative overflow-x-auto mt-8">
+    <table class="w-full text-sm text-left rtl:text-right bg-[#f5f5f5] border ">
+        <thead class="text-xs text-gray-700 uppercase ">
+            <tr>
+                <th scope="col" class="sm:px-6 px-2 py-6 sm:text-2xl text-lg border">
+                    Study Plan
+                </th>
+                <th scope="col" class="sm:px-6 px-2 py-6 sm:text-2xl text-lg border">
+                    Fee
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {
+                studyPlanFees.map(({plan,fee}) => <tr class="bg-white border-b ">
+                <th scope="row" class="sm:px-6 px-2 py-4 text-gray-900 text-sm sm:text-lg border">
+                        {plan}
+                </th>
+                <td class="sm:px-6 px-2 py-4 text-sm sm:text-lg border">
+                    {fee}
+                </td>
+            
+            </tr>)
+            }
+           
+        </tbody>
+    </table>
+</div>
+
 </div>

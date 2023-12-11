@@ -1,46 +1,46 @@
 export default [
   {
-    title: "Expert Guidance",
+    title: "Our Partners & Services",
     info: [
       {
-        title: "Personalized Expertise",
+        title: "Partners",
         subtext:
-          "Our seasoned consultants offer personalized guidance, tailoring each student's journey for success with a customized approach to meet their unique goals.",
+          "We are partnering with diverse prestigious universities, VET and ELICOS.",
       },
       {
-        title: "Up-to-Date Insights",
+        title: "Services",
         subtext:
-          "We keep you ahead with current insights for a competitive educational edge.",
+          "We take care of our application process and assist you with the suitable course that you have chosen to pursue in your education journey.",
       },
     ],
   },
   {
-    title: "Comprehensive Support",
+    title: "Visa & Opportunities",
     info: [
       {
-        title: "End-to-End Assistance",
+        title: "Visa Process",
         subtext:
-          "Navigate academics stress-free with our comprehensive support from program selection to admission.",
+          "We help you prepare applications and lodge your visa to your chosen country.",
       },
       {
-        title: "Career Counseling and Planning",
+        title: "Opportunities",
         subtext:
-          "We go beyond academics, offering career counseling and strategic planning to align education with long-term goals, empowering informed decisions for the future.",
+          "Beyond academics, we also give a hand in finding the accommodation, the plane tickets and providing a pre-departure briefing and many more.",
       },
     ],
   },
   {
-    title: "Access to Opportunities",
+    title: "Test Title",
     info: [
       {
-        title: "Global Network",
+        title: "Test Sub Title",
         subtext:
-          "Unlock global opportunities with our vast network, connecting students to prestigious universities, specialized programs, and unique scholarships.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iusto totam nesciunt assumenda recusandae fugit deserunt mollitia! Saepe provident sed suscipit nam, ",
       },
       {
-        title: "Opportunities Tailored to Ambitions",
+        title: "Test Sub Title",
         subtext:
-          "We align ambitions with opportunities, ensuring an enriching educational journey that leads to future success in chosen fields.",
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iusto totam nesciunt assumenda recusandae fugit deserunt mollitia! Saepe provident sed suscipit nam, ",
       },
     ],
   },

@@ -1,7 +1,8 @@
 ---
+import eventPreviewData from "../../data/eventPreviewData";
 import EventPreviewCard from "./EventPreviewCard.astro";
 ---
-
+ 
 <div class="max-w-7xl mx-auto mt-20">
   <h5 class="text-3xl text-center font-semibold text-primary-500">Events</h5>
   <p class="text-center max-w-xl mt-2 mb-6 text-gray-600 px-4 mx-auto">
@@ -9,8 +10,8 @@ import EventPreviewCard from "./EventPreviewCard.astro";
     Creativity.
   </p>
   <div class="flex flex-wrap justify-center max-w-7xl mx-auto gap-2 p-2">
-    <EventPreviewCard class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4" />
-    <EventPreviewCard class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4" />
-    <EventPreviewCard class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4" />
+    {
+      eventPreviewData.map((data) => <EventPreviewCard class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4" data={data}/>)
+    }
   </div>
 </div>

@@ -7,7 +7,10 @@ const DrawerItem = ({ data }) => {
   return (
     <>
       <button
-        onClick={() => setActive((prev) => !prev)}
+        onClick={() => {
+          setActive((prev) => !prev);
+          data.link && window.open(data.link, "_self");
+        }}
         className={`w-full min-h-[60px] px-4 flex justify-between items-center hover:bg-gray-50 ${
           active ? "bg-gray-200" : "bg-white"
         }`}

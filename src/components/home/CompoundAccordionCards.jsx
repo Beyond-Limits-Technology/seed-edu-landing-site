@@ -1,37 +1,23 @@
 import { useState } from "react";
 import AccordionCard from "../common/AccordionCard";
+import homeFaqsData from "../../data/homeFaqsData";
 
 const CompoundAccordionCard = () => {
   const [show, setShow] = useState(1);
   return (
     <>
-      <AccordionCard
-        title="hello"
-        answer="hello ans"
-        index={1}
-        value={show}
-        callback={(index) =>
-          setShow((prev) => (prev === index ? undefined : index))
-        }
-      />
-      <AccordionCard
-        title="hello"
-        answer="hello ans"
-        index={2}
-        value={show}
-        callback={(index) =>
-          setShow((prev) => (prev === index ? undefined : index))
-        }
-      />
-      <AccordionCard
-        title="hello"
-        answer="hello ans"
-        index={3}
-        value={show}
-        callback={(index) =>
-          setShow((prev) => (prev === index ? undefined : index))
-        }
-      />
+      {homeFaqsData.map((data, index) => (
+        <AccordionCard
+          key={index}
+          title={data.title}
+          answer={data.answer}
+          index={index}
+          value={show}
+          callback={(index) =>
+            setShow((prev) => (prev === index ? undefined : index))
+          }
+        />
+      ))}
     </>
   );
 };
