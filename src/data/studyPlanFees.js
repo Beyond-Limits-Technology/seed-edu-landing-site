@@ -21,7 +21,7 @@ export default [
   },
   {
     plan: "Postgraduate Master Degree",
-    fee: "Around $ $20,000 to $38,000",
+    fee: "Around $20,000 to $38,000",
   },
   {
     plan: "Doctoral Degree",
