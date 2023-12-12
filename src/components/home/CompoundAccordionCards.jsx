@@ -3,7 +3,7 @@ import AccordionCard from "../common/AccordionCard";
 import homeFaqsData from "../../data/homeFaqsData";
 
 const CompoundAccordionCard = () => {
-  const [show, setShow] = useState(1);
+  const [show, setShow] = useState(0);
   return (
     <>
       {homeFaqsData.map((data, index) => (

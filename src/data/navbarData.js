@@ -49,14 +49,14 @@ export default [
         name: "Study In Australia",
         link: "/study-in-australia",
       },
-      {
-        name: "Study In UK",
-        link: "/study-in-uk",
-      },
-      {
-        name: "Study In USA",
-        link: "/study-in-usa",
-      },
+      // {
+      //   name: "Study In UK",
+      //   link: "/study-in-uk",
+      // },
+      // {
+      //   name: "Study In USA",
+      //   link: "/study-in-usa",
+      // },
     ],
   },
   {
