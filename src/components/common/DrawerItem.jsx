@@ -1,18 +1,12 @@
-import { useState } from "react";
 import DrawerNestedItem from "./DrawerNestedItem";
 
-const DrawerItem = ({ data }) => {
-  const [active, setActive] = useState(false);
-
+const DrawerItem = ({ data, id, activeId, callback }) => {
   return (
     <>
       <button
-        onClick={() => {
-          setActive((prev) => !prev);
-          data.link && window.open(data.link, "_self");
-        }}
+        onClick={callback}
         className={`w-full min-h-[60px] px-4 flex justify-between items-center hover:bg-gray-50 ${
-          active ? "bg-gray-200" : "bg-white"
+          activeId === id ? "bg-gray-200" : "bg-white"
         }`}
       >
         <a
@@ -35,7 +29,7 @@ const DrawerItem = ({ data }) => {
         <div className="w-full bg-gray-50  sm:pl-10 pl-6">
           <div
             className={`w-full flex flex-col border-l  overflow-hidden border-black border-opacity-10 ${
-              active ? "min-h-[50px]" : "h-0"
+              activeId === id ? "min-h-[50px]" : "h-0"
             }`}
           >
             {data.subData?.map((data) => (

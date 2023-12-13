@@ -1,7 +1,10 @@
 import DrawerItem from "./DrawerItem";
 import navbarData from "../../data/navbarData";
+import { useState } from "react";
 
 const Drawer = ({ showDrawer, setShowDrawer }) => {
+  const [activeId, setActiveId] = useState(undefined);
+
   return (
     <>
       <div
@@ -43,10 +46,17 @@ const Drawer = ({ showDrawer, setShowDrawer }) => {
           </button>
         </div>
 
-        {navbarData?.map((data) => (
-          <DrawerItem key={data.name} data={data} />
+        {navbarData?.map((data, index) => (
+          <DrawerItem
+            key={data.name}
+            data={data}
+            id={index}
+            activeId={activeId}
+            callback={() => setActiveId(index)}
+          />
         ))}
         <DrawerItem
+          activeId={null}
           data={{
             name: "Appointment",
             link: "/appointment",
