@@ -2,11 +2,11 @@ import { useState } from "react";
 import AccordionCard from "../common/AccordionCard";
 
 const Content = () => {
-  const [show, setShow] = useState(1);
+  const [show, setShow] = useState(undefined);
 
   return (
-    <div className="max-w-7xl mx-auto py-[100px] px-2">
-      <h6 className="text-5xl font-bold text-black text-center">
+    <div className="max-w-7xl mx-auto py-[100px] px-5">
+      <h6 className="sm:text-5xl text-4xl font-bold text-black text-center">
         Frequently Asked Questions
       </h6>
 
