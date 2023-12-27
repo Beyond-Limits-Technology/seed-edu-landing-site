@@ -2,7 +2,7 @@ import countries from "../../data/countries";
 
 const AppointmentForm = () => {
   return (
-    <section className="">
+    <section className="px-5">
       <div className="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-16">
         <h2 className="text-3xl font-bold">Book Your Consultation Now</h2>
         <p className="mx-auto mb-8 mt-4 max-w-sm md:max-w-3xl text-base text-[#636262] md:mb-12 md:text-lg lg:mb-16">
@@ -20,7 +20,7 @@ const AppointmentForm = () => {
           />
         </div>
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
-          <div className="px-6 lg:px-8">
+          <div className="">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">
                 Book Now
