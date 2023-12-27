@@ -1,5 +1,7 @@
 export default [
   {
+    image:
+      "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "Our Partners & Services",
     info: [
       {
@@ -15,6 +17,8 @@ export default [
     ],
   },
   {
+    image:
+      "https://images.pexels.com/photos/7235894/pexels-photo-7235894.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "Visa & Opportunities",
     info: [
       {
@@ -26,21 +30,6 @@ export default [
         title: "Opportunities",
         subtext:
           "Beyond academics, we also give a hand in finding the accommodation, the plane tickets and providing a pre-departure briefing and many more.",
-      },
-    ],
-  },
-  {
-    title: "Test Title",
-    info: [
-      {
-        title: "Test Sub Title",
-        subtext:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iusto totam nesciunt assumenda recusandae fugit deserunt mollitia! Saepe provident sed suscipit nam, ",
-      },
-      {
-        title: "Test Sub Title",
-        subtext:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iusto totam nesciunt assumenda recusandae fugit deserunt mollitia! Saepe provident sed suscipit nam, ",
       },
     ],
   },

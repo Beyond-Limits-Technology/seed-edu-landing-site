@@ -3,21 +3,23 @@ import WhySeedCard from "./WhySeedCard.astro";
 import whySeedData from "../../data/whySeedData";
 ---
 
-<div class="w-full flex flex-col items-center justify-center mt-20">
-  <div>
+<div class="w-full py-20 px-3 md:px-4">
+  <div >
     <h5 class="text-3xl text-center font-semibold text-primary-500">
       Why Seed?
     </h5>
-    <div>
-      <p class="text-center max-w-xl mt-2 mb-6 text-gray-600 px-4">
-        With years of experience in the education industry, SEED Education brags about a team of counsellors dedicated to providing personalised guidance tailored to each students’ ambition.
+
+    <div class="max-w-2xl mx-auto">
+      <p class="text-center mt-2 mb-6 text-gray-600 px-4">
+       With years of experience in the education industry, SEED Education brags about a team of counsellors dedicated to providing personalised guidance tailored to each students’ ambition.
       </p>
     </div>
+
   </div>
-  <div class="flex flex-col md:flex-row gap-1 md:gap-2">
+  <div class="flex flex-col gap-3 md:gap-4 max-w-7xl mx-auto mt-20">
     {
-      whySeedData.map((wsd) => (
-        <WhySeedCard title={wsd.title} info={wsd.info} />
+      whySeedData.map((wsd,index) => (
+        <WhySeedCard title={wsd.title} info={wsd.info} image={wsd.image} idx={index} />
       ))
     }
   </div>

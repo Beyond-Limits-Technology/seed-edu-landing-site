@@ -1,15 +1,25 @@
 ---
-const { title, info } = Astro.props;
+const { title, info , idx ,image} = Astro.props;
 ---
 
-<div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
-  <h5 class="mb-4 text-xl tracking-tight">{title}</h5>
-  {
-    info.map((i) => (
-      <>
-        <p class="mb-2 font-normal text-gray-600">• {i.title}</p>
-        <p class="mb-3 font-normal">{i.subtext}</p>
-      </>
-    ))
-  }
+<div class={`w-full flex md:gap-4 gap-0 md:h-[400px] h-auto ${idx % 2 === 0 ? "md:flex-row-reverse flex-col" : "md:flex-row flex-col "}
+ md:rounded-none rounded-md md:shadow-none shadow-md overflow-hidden`}>
+  <div class="md:w-1/2 w-full md:h-full h-[300px] overflow-hidden">
+    <img src={image} alt={title} class="w-full
+     object-cover h-full">
+  </div>
+
+  <div class="md:w-1/2 w-full flex flex-col gap-2 items-start justify-center sm:px-8 px-4 py-8 bg-gray-100 h-full">
+    <p class="font-[500] text-black text-2xl">{title}</p>
+
+    {
+      info.map((i) => (
+        <div class="flex flex-col gap-2 items-start ">
+          <p class=" font-normal text-gray-600">• {i.title}</p>
+          <p class="font-normal">{i.subtext}</p>
+        </div>
+      ))
+    }
+  </div>
+
 </div>
