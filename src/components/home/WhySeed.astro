@@ -4,7 +4,7 @@ import whySeedData from "../../data/whySeedData";
 ---
 
 <div class="w-full py-20 px-3 md:px-4">
-  <div>
+  <div >
     <h5 class="text-3xl text-center font-semibold text-primary-500">
       Why Seed?
     </h5>
@@ -12,11 +12,11 @@ import whySeedData from "../../data/whySeedData";
     <div class="max-w-2xl mx-auto">
       <p class="text-center mt-2 mb-6 text-gray-600 px-4">
        With years of experience in the education industry, SEED Education brags about a team of counsellors dedicated to providing personalised guidance tailored to each students’ ambition.
-    </p>
+      </p>
     </div>
 
   </div>
-  <div class="flex flex-col gap-3 md:gap-4 max-w-7xl mx-auto">
+  <div class="flex flex-col gap-3 md:gap-4 max-w-7xl mx-auto mt-10">
     {
       whySeedData.map((wsd,index) => (
         <WhySeedCard title={wsd.title} info={wsd.info} image={wsd.image} idx={index} />
