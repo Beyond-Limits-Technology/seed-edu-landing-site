@@ -3,7 +3,7 @@ import Footer from "../components/common/Footer.astro";
 import Navbar from "../components/common/Navbar";
 interface Props {
   title: string;
-  isNavbarActive?: boolean
+  isNavbarActive?: boolean;
 }
 
 const { title, isNavbarActive = false } = Astro.props;
@@ -24,8 +24,46 @@ const { title, isNavbarActive = false } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-switzer">
-    <Navbar client:only active={isNavbarActive}/>
+    <Navbar client:only active={isNavbarActive} />
     <slot />
     <Footer />
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "102905679464641");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      declare global {
+        interface Window {
+          fbAsyncInit: () => void;
+        }
+      }
+
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
   </body>
 </html>
