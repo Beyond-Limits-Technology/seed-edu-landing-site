@@ -1,7 +1,7 @@
 ---
-import Breadcrumb from "../../components/common/Breadcrumb.astro";
-import EventCard from "../../components/events/EventCard.astro"
-import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../../components/common/Breadcrumb.astro";
+import EventCard from "../../../components/events/EventCard.astro"
+import Layout from "../../../layouts/Layout.astro";
 
 ---
 
@@ -14,7 +14,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
     <div class="absolute inset-0 bg-black opacity-50"></div>
     <div
-      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+      class="absolute inset-0 flex flex-col justify-center items-center text-white px-5"
     >
       <h1 class="sm:text-7xl text-center text-4xl font-bold">Events</h1>
       <Breadcrumb routeName="Events" link="events" />

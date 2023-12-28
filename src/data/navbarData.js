@@ -95,15 +95,15 @@ export default [
       // },
       {
         name: "FAQs",
-        link: "/faqs",
+        link: "/updates/faqs",
       },
       {
         name: "Events",
-        link: "/events",
+        link: "/updates/events",
       },
       {
         name: "Privacy Policy",
-        link: "/privacy-policy",
+        link: "/updates/privacy-policy",
       },
     ],
   },
