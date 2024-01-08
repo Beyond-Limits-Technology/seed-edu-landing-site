@@ -61,9 +61,9 @@ const Navbar = ({ active }) => {
               xmlns="http://www.w3.org/2000/svg"
               stroke={isScrollActive ? "black" : "white"}
             >
-              <path d="M5 12H18" stroke-width="2" stroke-linecap="round" />
-              <path d="M5 17H11" stroke-width="2" stroke-linecap="round" />
-              <path d="M5 7H15" stroke-width="2" stroke-linecap="round" />
+              <path d="M5 12H18" strokeWidth="2" strokeLinecap="round" />
+              <path d="M5 17H11" strokeWidth="2" strokeLinecap="round" />
+              <path d="M5 7H15" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
         </div>
