@@ -26,15 +26,14 @@ const AccordionCard = ({ title, answer, index, value, callback }) => {
           </svg>
         </button>
       </h2>
-      {index === value && (
-        <div>
-          <div className="py-5">
-            <div className="mb-2 text-gray-700 tracking-[0.2px] text-start">
-              {answer}
-            </div>
-          </div>
-        </div>
-      )}
+
+      <div
+        className={`mb-2 text-gray-700 tracking-[0.2px] text-start overflow-hidden mt-4 transition-all duration-500 ease-in-out ${
+          value === index ? "max-h-[100rem]" : "max-h-[0rem]"
+        }`}
+      >
+        {answer}
+      </div>
     </>
   );
 };
