@@ -4,7 +4,12 @@ import STextarea from "../common/STextarea.astro";
 ---
 
 <div class="w-full py-10 sm:px-6 bg-white sm:shadow-lg rounded-md sm:border border-black border-opacity-5">
-  <div class="flex flex-col gap-4">
+  <form 
+    class="flex flex-col gap-4"    
+    action="https://formsubmit.co/dennykate22@gmail.com"
+    method="POST"
+  >
+    <input type="hidden" name="_template" value="table" />
     <div class="grid sm:grid-cols-2 grid-cols-1 gap-4">
       <SInput name="name" placeholder="Name*" />
       <SInput type="email" name="email" placeholder="Email*" />
@@ -12,9 +17,9 @@ import STextarea from "../common/STextarea.astro";
     <SInput name="phone" placeholder="Phone Number*" />
     <STextarea name="message" placeholder="Your Message*" />
     <div class="flex justify-end">
-      <button class="px-10 py-3 text-lg font-bold bg-black text-white rounded">
+      <button type="submit" class="px-10 py-3 text-lg font-bold bg-black text-white rounded">
         Submit
       </button>
     </div>
-  </div>
+  </form>
 </div>
