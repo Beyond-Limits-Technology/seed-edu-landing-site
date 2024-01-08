@@ -29,7 +29,12 @@ const AppointmentForm = () => {
                 Book an appointment with us by filling out below fields drop a
                 message, our experts will contact you for your consultation.
               </p>
-              <form action="#" method="POST" className="mt-16">
+              <form
+                className="mt-16"
+                action="https://formsubmit.co/dennykate22@gmail.com"
+                method="POST"
+              >
+                <input type="hidden" name="_template" value="table" />
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
                     <label
