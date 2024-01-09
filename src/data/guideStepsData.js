@@ -5,7 +5,7 @@ export default [
       "Choose what you want to study, find a school or college, and pick a city that suits your lifestyle and budget. Explore subjects, read course descriptions and reviews, then make a list to help narrow down your options.",
   },
   {
-    title: "Phase 2 - Talk with SSEEDEED counsellors",
+    title: "Phase 2 - Talk with SEED counsellors",
     description:
       "Book a meeting with a counsellor, who are certified and often former international students. They offer friendly advice based on personal experiences from various study locations worldwide. Bring your wish-list and course preferences to the appointment. And your counsellor will help find the best match between you, your future university, your VET colleges, and your area of study.",
   },

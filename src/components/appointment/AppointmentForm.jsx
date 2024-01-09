@@ -2,7 +2,7 @@ import countries from "../../data/countries";
 
 const AppointmentForm = () => {
   return (
-    <section className="px-5">
+    <section className="px-5 mb-20">
       <div className="mx-auto mb-8 flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-16">
         <h2 className="text-3xl font-bold">Book Your Consultation Now</h2>
         <p className="mx-auto mb-8 mt-4 max-w-sm md:max-w-3xl text-base text-[#636262] md:mb-12 md:text-lg lg:mb-16">
