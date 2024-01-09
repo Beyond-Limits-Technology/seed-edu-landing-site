@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/common/Footer.astro";
 import Navbar from "../components/common/Navbar";
+import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
   isNavbarActive?: boolean;
@@ -9,7 +10,7 @@ interface Props {
 const { title, isNavbarActive = false } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +22,9 @@ const { title, isNavbarActive = false } = Astro.props;
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="../styles/base.css" />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body class="font-switzer">
     <Navbar client:only active={isNavbarActive} />
