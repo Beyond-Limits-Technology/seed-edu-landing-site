@@ -2,7 +2,7 @@
 import Layout from "../../../../layouts/Layout.astro";
 const { title, post, date, description, author, image, postId, tags } =
   Astro.props;
-console.log("post", post);
+
 const { Content } = await post.render();
 ---
 
