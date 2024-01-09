@@ -1,4 +1,9 @@
-<div class="w-full relative py-20">
+---
+import scholarshipContentData from "../../data/scholarshipContentData";
+
+---
+
+<div class="w-full relative py-28 ">
   <div
     class="max-w-7xl mx-auto px-5 flex lg:flex-row flex-col lg:items-center items-start gap-4"
   >
@@ -19,28 +24,33 @@
           Scholarship Options for international students in Australia
         </h6>
 
-        <div class="flex flex-col items-start list-disc list-inside gap-4">
-          <p class="sm:text-lg text-base font-[400] text-black">
-            • Save on your course fees with the assistance of SEED Education
+        <div class="flex flex-col items-start list-disc list-inside gap-8 mt-8">
+         {
+          scholarshipContentData?.map((data) =>  <div class="flex items-start justify-start gap-4">
+              <span class=" flex items-center justify-center min-w-[22px] h-[22px] bg-primary-400 rounded-full ring-4 ring-white">
+                  <svg
+                    class="w-3.5 h-3.5 text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 16 12"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5.917 5.724 10.5 15 1.5"
+                    />
+                  </svg>
+                </span>
+                <p class="sm:text-lg text-base font-[400] text-black">
+            {data?.content}
           </p>
-          <p class="sm:text-lg text-base font-[400] text-black">
-            • Australian universities and colleges offer diverse scholarships to
-            attract top global talent. These programs, funded by both the
-            government and institutions, provide significant financial
-            assistance for education and living expenses, making studying in
-            Australia more accessible for high-achieving students.
-          </p>
-          <p class="sm:text-lg text-base font-[400] text-black">
-            • SEED Education, in close collaboration with Australian schools and
-            colleges, provides you with exclusive access to the most recent
-            scholarships and bursaries available for international students. We
-            ensure that you stay informed about the latest opportunities and
-            guide you through the application process.
-          </p>
-          <p class="sm:text-lg text-base font-[400] text-black">
-            • For more details of the scholarship consultation, book with our
-            expert by filling out below fields and drop a message.
-          </p>
+          </div>)
+         }
+
+    
         </div>
       </div>
     </div>
@@ -68,5 +78,9 @@
         />
       </div>
     </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 flex items-end justify-end w-full">
+    <img src="/assets/images/scholarship-students.jpg" alt="sholarship-studebts" class="w-[180px] opacity-60" >
   </div>
 </div>
