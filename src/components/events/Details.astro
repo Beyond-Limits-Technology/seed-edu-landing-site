@@ -2,7 +2,7 @@
 
 ---
 
-<div class="max-w-7xl mx-auto sm:py-20 py-2 px-5" >
+<div class="max-w-4xl mx-auto sm:py-20 py-2 px-5" >
     
     <img src="https://www.kdischool.ac.kr/www/img/sub/sub_a10502010000_1.jpg" alt="course" 
     class="my-6 w-full object-cover h-[500px]">
@@ -21,4 +21,35 @@
                 US Education System is categorised into different groups. First, it is the primary school followed by middle school, and then post-secondary education. When it comes to higher education system in Australia, there are 4 types of institutions in the Australia namely State College or University, Private College of University, Community Colleges, and Technology Institutes.
             </p>
         </div>
+</div>
+
+<div class="max-w-7xl mx-auto sm:py-20 py-2 px-5">
+     <h6 class="sm:text-3xl text-2xl font-semibold text-black text-start mt-4">Other Events</h6>
+
+     <div class="grid grid-cols-4 gap-4 mt-4">
+       {
+        [0,1,2,3].map(() =>  <article class="">
+        <a href="#">
+          <img
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
+            class="mb-5 rounded-lg"
+            alt="Image 1"
+          />
+        </a>
+        <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
+          <a href="#">Our first office</a>
+        </h2>
+        <p class="mb-4 text-gray-500">
+          Over the past year, Volosoft has undergone many changes! After months
+          of preparation.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+        >
+          Read in 2 minutes
+        </a>
+      </article>)
+       }
+     </div>
 </div>
