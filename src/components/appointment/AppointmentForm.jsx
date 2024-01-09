@@ -104,29 +104,7 @@ const AppointmentForm = () => {
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-2">
-                    <div className="flex justify-between text-sm leading-6">
-                      <label
-                        htmlFor="phone"
-                        className="block font-semibold text-gray-900"
-                      >
-                        Phone
-                      </label>
-                      <p id="phone-description" className="text-gray-400">
-                        Optional
-                      </p>
-                    </div>
-                    <div className="mt-2.5">
-                      <input
-                        type="tel"
-                        name="phone"
-                        id="phone"
-                        autoComplete="tel"
-                        aria-describedby="phone-description"
-                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                      />
-                    </div>
-                  </div>
+
                   <div className="sm:col-span-2">
                     <div className="flex justify-between text-sm leading-6">
                       <label
@@ -153,7 +131,7 @@ const AppointmentForm = () => {
                     <legend className="block text-sm font-semibold leading-6 text-gray-900">
                       Are you currently in Australia?
                     </legend>
-                    <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
+                    <div className="mt-4 gap-4 text-sm flex items-center   leading-6 text-gray-600">
                       <div className="flex gap-x-2.5">
                         <input
                           id="yes"

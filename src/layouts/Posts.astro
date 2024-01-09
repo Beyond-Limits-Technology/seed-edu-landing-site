@@ -1,0 +1,85 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
+import ArticleCard from "../components/updates/news-Blogs/ArticleCard.astro";
+import Layout from "./Layout.astro";
+import Pagination from "../components/common/Pagination.astro";
+// import Pagination from "@philnash/astro-pagination";
+
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  paginatedPosts: CollectionEntry<"posts">[];
+}
+
+export async function getStaticPaths({ paginate }) {}
+
+const { currentPage, totalPages, paginatedPosts } = Astro.props;
+// console.log("page", page);
+---
+
+<Layout title="SEED | News & Blogs">
+  <div class="relative h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-75"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white px-5"
+    >
+      <h1 class="sm:text-7xl text-center text-4xl font-bold">News & Blogs</h1>
+      <Breadcrumb routeName="News & Blogs" link="update/news-blogs" />
+      <p class="sm:text-lg text-base mt-6 text-center">
+        Stay Informed and Inspired with Seed Education's News and Blog
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-white mt-20">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:max-w-4xl">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          News And Articles
+        </h2>
+        <p class="mt-2 text-lg leading-8 text-gray-600">
+          Our curated articles cover a spectrum of topics, from study tips and
+          career advice to the latest trends in technology and education.
+        </p>
+
+        <ul>
+          {
+            paginatedPosts.map(
+              (
+                post
+                // <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+              ) => (
+                <div class="mt-10 space-y-10 lg:mt-20 lg:space-y-10">
+                  <ArticleCard
+                    title={post.data.title}
+                    description={post.data.description}
+                    image={post.data.image.url}
+                    date={post.data.date}
+                    postId={post.slug}
+                    tags={post.data.tags}
+                  />
+                </div>
+              )
+            )
+          }
+        </ul>
+
+        <Pagination
+          {currentPage}
+          {totalPages}
+          prevUrl={`/updates/news-blogs/${
+            currentPage - 1 !== 1 ? "/" + (currentPage - 1) : ""
+          }`}
+          nextUrl={`/updates/news-blogs/${currentPage + 1}`}
+        />
+
+        <!-- <NewsAndBlogs /> -->
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -42,12 +42,13 @@ const Navbar = ({ active }) => {
               />
             ))}
 
-            <button
-              onClick={() => window.open("/appointment", "_self")}
+            <a
+              // onClick={() => window.open("/appointment", "_self")}
+              href="/appointment"
               className="px-8 py-3 bg-primary-500 hover:bg-primary-600 active:translate-y-[2px] text-white uppercase rounded-full "
             >
               Appointment
-            </button>
+            </a>
           </div>
 
           <button

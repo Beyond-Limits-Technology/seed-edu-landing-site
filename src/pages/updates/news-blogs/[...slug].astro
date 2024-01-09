@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+
+import NewsAndBlogDetails from "../../../components/updates/news-Blogs/content/NewsAndBlogDetails.astro";
+import getPageNumbers from "../../../utils/getPageNumbers";
+import getSortedPosts from "../../../utils/getSortedPosts";
+import getPagination from "../../../utils/getPagination";
+import Posts from "../../../layouts/Posts.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("posts");
+  console.log(blogEntries);
+  const postResult = blogEntries.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+
+  const pagePaths = getPageNumbers(blogEntries.length).map((pageNum) => ({
+    params: { slug: String(pageNum) },
+  }));
+
+  return [...postResult, ...pagePaths];
+  //   return blogEntries.map((post) => ({
+  //     params: { slug: entry.slug },
+  //     props: { entry },
+  //   }));
+}
+
+const { post } = Astro.props;
+const { slug } = Astro.params;
+const posts = await getCollection("posts");
+const sortedPosts = getSortedPosts(posts);
+
+const pagination = getPagination({
+  posts: sortedPosts,
+  page: slug,
+});
+console.log("post", post);
+
+// let Content;
+
+// if (post) {
+//   Content = await post.render();
+//   console.log(first)
+// }
+---
+
+{
+  post ? (
+    <NewsAndBlogDetails
+      post={post}
+      postId={post.data.postId}
+      title={post.data.title}
+      image={post.data.image}
+    />
+  ) : (
+    <Posts {...pagination} />
+  )
+}

@@ -1,5 +1,16 @@
 ---
-const { image, title, date, description, tag, postId } = Astro.props;
+import Datetime from "../../common/Datetime";
+
+type Props = {
+  image: string;
+  title: string;
+  date: string;
+  description: string;
+  tags: string;
+  postId: string;
+};
+
+const { image, title, date, description, tags, postId } = Astro.props as Props;
 ---
 
 <article class="relative isolate flex flex-col gap-8 lg:flex-row">
@@ -18,12 +29,14 @@ const { image, title, date, description, tag, postId } = Astro.props;
   </div>
   <div>
     <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-16" class="text-gray-500">{date}</time>
-      <a
-        href="#"
+      <!-- <time class="text-gray-500">{date}</time> -->
+      <Datetime pubDatetime={date} />
+
+      <p
         class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-        >{tag}</a
       >
+        {tags}
+      </p>
     </div>
     <div class="group relative max-w-xl">
       <h3

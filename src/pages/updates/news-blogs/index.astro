@@ -1,25 +1,29 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Breadcrumb from "../../../components/common/Breadcrumb.astro";
-import NewsAndBlogs from "../../../components/updates/news-Blogs/NewsAndBlogs.astro";
+import { getCollection } from "astro:content";
+import Posts from "../../../layouts/Posts.astro";
+import getPagination from "../../../utils/getPagination";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection("posts");
+  const sortedPosts = allPosts.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  });
+}
+
+const allPosts = await getCollection("posts");
+console.log(allPosts);
+
+const sortedPosts = allPosts.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+
+const pagination = getPagination({
+  posts: sortedPosts,
+  page: 1,
+  isIndex: true,
+});
+
+console.log("pagination", pagination);
 ---
 
-<Layout title="SEED | News & Blogs">
-  <div class="relative h-[500px] overflow-hidden">
-    <div
-      class="absolute inset-0 bg-cover bg-[url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-75"
-    >
-    </div>
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div
-      class="absolute inset-0 flex flex-col justify-center items-center text-white px-5"
-    >
-      <h1 class="sm:text-7xl text-center text-4xl font-bold">News & Blogs</h1>
-      <Breadcrumb routeName="News & Blogs" link="update/news-blogs" />
-      <p class="sm:text-lg text-base mt-6 text-center">
-        Stay Informed and Inspired with Seed Education's News and Blog
-      </p>
-    </div>
-  </div>
-  <NewsAndBlogs />
-</Layout>
+<Posts {...pagination} />
