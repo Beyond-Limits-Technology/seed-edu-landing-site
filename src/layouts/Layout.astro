@@ -5,14 +5,19 @@ import { ViewTransitions } from "astro:transitions";
 interface Props {
   title: string;
   isNavbarActive?: boolean;
-  hideNavbar?:boolean;
-  hideFooter?:boolean;
+  hideNavbar?: boolean;
+  hideFooter?: boolean;
 }
 
-const { title, isNavbarActive = false ,hideNavbar = false , hideFooter = false} = Astro.props;
+const {
+  title,
+  isNavbarActive = false,
+  hideNavbar = false,
+  hideFooter = false,
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,16 +29,16 @@ const { title, isNavbarActive = false ,hideNavbar = false , hideFooter = false} 
       rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="../styles/base.css" />
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
   <body class="font-switzer">
     {!hideNavbar && <Navbar client:only active={isNavbarActive} />}
-    
+
     <slot />
-    
-    {!hideFooter &&  <Footer />}
+
+    {!hideFooter && <Footer />}
 
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
