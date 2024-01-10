@@ -1,0 +1,45 @@
+---
+import Breadcrumb from "../components/common/Breadcrumb.astro";
+import ReadyToDiveIn from "../components/common/ReadyToDiveIn.astro";
+import EventCard from "../components/events/EventCard.astro";
+import Layout from "./Layout.astro";
+
+const { events } = Astro.props;
+console.log(events);
+---
+
+<Layout title="SEED | Events">
+  <div class="relative h-[500px] overflow-hidden">
+    <div
+      class="absolute inset-0 bg-cover bg-[url('https://msk-s3.o2-cloud.ru/portal/images/about-img1.jpg')] bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-75"
+    >
+    </div>
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div
+      class="absolute inset-0 flex flex-col justify-center items-center text-white px-5"
+    >
+      <h1 class="sm:text-7xl text-center text-4xl font-bold">Events</h1>
+      <Breadcrumb routeName="Events" link="events" />
+      <p class="sm:text-lg text-base mt-6 text-center">
+        Stay Informed and Inspired with Seed Education's News and Blog
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto py-20 px-5">
+    {
+      events.map((event) => (
+        <EventCard
+          title={event.data.title}
+          description={event.data.description}
+          date={event.data.date}
+          image={event.data.image.url}
+          eventId={event.slug}
+          link={event.link}
+        />
+      ))
+    }
+  </div>
+
+  <ReadyToDiveIn />
+</Layout>
