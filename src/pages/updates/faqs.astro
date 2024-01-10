@@ -1,12 +1,12 @@
 ---
-import Breadcrumb from "../../components/common/Breadcrumb.astro";
-import Layout from "../../layouts/Layout.astro";
-import Content from "../../components/faqs/Content.jsx"
-import ReadyToDiveIn from "../../components/common/ReadyToDiveIn.astro";
+import Breadcrumb from "@components/common/Breadcrumb.astro";
+import Layout from "@layouts/Layout.astro";
+import Content from "@components/faqs/Content.jsx";
+import ReadyToDiveIn from "@components/common/ReadyToDiveIn.astro";
 ---
 
 <Layout title="SEED | FAQs">
-    <div class="relative h-[500px] overflow-hidden">
+  <div class="relative h-[500px] overflow-hidden">
     <div
       class="absolute inset-0 bg-cover bg-[url('https://www.smtusa.com/uploads/faqs.jpg')]
        bg-center bg- w-screen min-h-[350px] bg-no-repeat brightness-50"
@@ -18,10 +18,12 @@ import ReadyToDiveIn from "../../components/common/ReadyToDiveIn.astro";
     >
       <h1 class="sm:text-7xl text-center text-4xl font-bold">FAQs</h1>
       <Breadcrumb routeName="FAQs" link="faqs" />
-      <p class="sm:text-lg text-base mt-6 text-center">Empowering your Dreams towards a Bright Future</p>
+      <p class="sm:text-lg text-base mt-6 text-center">
+        Empowering your Dreams towards a Bright Future
+      </p>
     </div>
   </div>
 
-  <Content client:visible/>
+  <Content client:visible />
   <ReadyToDiveIn />
 </Layout>

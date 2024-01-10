@@ -1,11 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import Breadcrumb from "../components/common/Breadcrumb.astro";
-import ArticleCard from "../components/updates/news-Blogs/ArticleCard.astro";
-import Layout from "./Layout.astro";
-import Pagination from "../components/common/Pagination.astro";
-import ReadyToDiveIn from "../components/common/ReadyToDiveIn.astro";
-// import Pagination from "@philnash/astro-pagination";
+import Breadcrumb from "@components/common/Breadcrumb.astro";
+import ArticleCard from "@components/updates/news-Blogs/ArticleCard.astro";
+import Layout from "@layouts/Layout.astro";
+import Pagination from "@components/common/Pagination.astro";
+import ReadyToDiveIn from "@components/common/ReadyToDiveIn.astro";
 
 export interface Props {
   currentPage: number;
