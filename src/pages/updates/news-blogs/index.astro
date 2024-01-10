@@ -3,13 +3,6 @@ import { getCollection } from "astro:content";
 import Posts from "../../../layouts/Posts.astro";
 import getPagination from "../../../utils/getPagination";
 
-export async function getStaticPaths({ paginate }) {
-  const allPosts = await getCollection("posts");
-  const sortedPosts = allPosts.sort((a, b) => {
-    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-  });
-}
-
 const allPosts = await getCollection("posts");
 
 const sortedPosts = allPosts.sort((a, b) => {
