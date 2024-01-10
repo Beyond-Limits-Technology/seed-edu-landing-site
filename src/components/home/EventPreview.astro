@@ -2,10 +2,10 @@
 import eventPreviewData from "../../data/eventPreviewData";
 import EventPreviewCard from "./EventPreviewCard.astro";
 ---
- 
+
 <div class="w-full py-20 relative isolate px-5">
   <svg
-    class="absolute  inset-0 -z-10 opacity-70  h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    class="absolute inset-0 -z-10 opacity-70 h-full w-full stroke-gray-300 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
     aria-hidden="true"
   >
     <defs>
@@ -23,12 +23,12 @@ import EventPreviewCard from "./EventPreviewCard.astro";
     <svg x="50%" y="-64" class="overflow-visible fill-gray-50">
       <path
         d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M299.5 800h201v201h-201Z"
-        stroke-width="0"></path>
+        strokeWidth="0"></path>
     </svg>
     <rect
       width="100%"
       height="100%"
-      stroke-width="0"
+      strokeWidth="0"
       fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
   </svg>
 
@@ -39,7 +39,12 @@ import EventPreviewCard from "./EventPreviewCard.astro";
   </p>
   <div class="flex flex-wrap justify-center max-w-7xl mx-auto gap-4 py-4 mt-16">
     {
-      eventPreviewData.map((data) => <EventPreviewCard class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4" data={data}/>)
+      eventPreviewData.map((data) => (
+        <EventPreviewCard
+          class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4"
+          data={data}
+        />
+      ))
     }
   </div>
 </div>

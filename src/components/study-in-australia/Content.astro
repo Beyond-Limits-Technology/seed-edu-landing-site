@@ -1,123 +1,180 @@
-<div class="max-w-7xl mx-auto px-5 sm:py-[50px] py-[20px] ">
-    <div class="mb-8 flex flex-col items-start gap-4">
-        <h6 class="font-semibold text-4xl text-black py-6 border-b-[2px] border-black">Australia</h6>
-        <p class="text-base font-[400] text-black">
-            Australia has always remained the top choice for higher studies among international students. According to the US Citizenship and Immigration Services (USCIS), 2,32,851 Indian students went to the Australia for higher studies in 2021. The number of Indian students in the US increased by more than 12% in 2021. US is home to the maximum number of top universities in the world. 
-            There is always an eagerness among international students for going to the US and experience the higher education system there.
-        </p>
+---
+import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanceCourses ,otherCourses } from "../../data/coursesData";
+
+---
+
+<div class="sm:py-[50px] py-[20px] relative">
+  <div class="max-w-7xl mx-auto px-5 ">
+  <div class="flex justify-between md:flex-row flex-col items-end mb-8 gap-4" >
+    <div class="md:w-2/3 w-full   flex flex-col items-start gap-4 md:pb-8">
+    <h6
+      class="font-semibold text-4xl text-black py-6 "
+    >
+      Australia
+    </h6>
+    <p class="text-base font-[400] text-black">
+      Australia has always remained the top choice for higher studies among
+      international students. According to the US Citizenship and Immigration
+      Services (USCIS), 2,32,851 Indian students went to the Australia for
+      higher studies in 2021. The number of Indian students in the US increased
+      by more than 12% in 2021. US is home to the maximum number of top
+      universities in the world. There is always an eagerness among
+      international students for going to the US and experience the higher
+      education system there.
+    </p>
+  </div>
+
+    <div class="relative md:w-1/3 w-full h-[240px]">
+      <div class="w-full h-full rounded overflow-hidden">
+        <img src="/assets/images/au-city-view-bg.jpg" alt="au-city-view-bg" class="w-full h-full object-cover">
+      </div>
+
+      <div class="w-full h-full  rounded overflow-hidden absolute top-4 left-4">
+        <img src="/assets/images/au-city-view.jpg" alt="au-city-view" class="w-full h-full object-cover">
+      </div>
     </div>
+  </div>
 
-    <!-- Education System  -->
-    <div class="mb-8 flex flex-col items-start gap-4">
-        <h6 class="font-semibold text-4xl text-black py-6 border-b-[2px] border-black">Australian Education</h6>
-        <p class="text-base font-[400] text-black">
-            -       Australia has many study options for international students, with over 1,100 institutions and 22,000 courses. The education system includes primary, secondary, and tertiary levels, guided by the Australian Qualifications Framework (AQF), which shows how qualifications connect at each education level.
-        </p>
-        <p class="text-base font-[400] text-black">
-            -       International students can study at all levels, from primary school to higher education. Tertiary education in Australia includes universities and vocational education and training (VET) or TAFE colleges. 
-        </p>
-        <p class="text-base font-[400] text-black">
-            -       For quality assurance, there are organizations like TEQSA for higher education and ASQA for VET institutions. They handle registration and accreditation matters. 
-        </p>
-        <p class="text-base font-[400] text-black">
-            -       Australia’s Laws ensure quality education and protection for international students, including the ESOS Act 2000 and the National Code of Practice for Overseas Students 2007. These set consistent standards for education providers. 
+  <!-- Education System  -->
+  <div class="mb-8 flex flex-col items-start gap-4">
+    <h6
+      class="font-semibold text-4xl text-black py-6 "
+    >
+      Australian Education
+    </h6>
+    <p class="text-base font-[400] text-black">
+      • Australia has many study options for international students, with over
+      1,100 institutions and 22,000 courses. The education system includes
+      primary, secondary, and tertiary levels, guided by the Australian
+      Qualifications Framework (AQF), which shows how qualifications connect at
+      each education level.
+    </p>
+    <p class="text-base font-[400] text-black">
+      • International students can study at all levels, from primary school to
+      higher education. Tertiary education in Australia includes universities
+      and vocational education and training (VET) or TAFE colleges.
+    </p>
+    <p class="text-base font-[400] text-black">
+      • For quality assurance, there are organizations like TEQSA for higher
+      education and ASQA for VET institutions. They handle registration and
+      accreditation matters.
+    </p>
+    <p class="text-base font-[400] text-black">
+      • Australia’s Laws ensure quality education and protection for
+      international students, including the ESOS Act 2000 and the National Code
+      of Practice for Overseas Students 2007. These set consistent standards for
+      education providers.
+    </p>
+    <p class="text-base font-[400] text-black">
+      • If you are ready to learn more about studying in Australia, contact us
+      today to talk to an education expert!
+    </p>
+  </div>
 
-        </p>
-        <p class="text-base font-[400] text-black">
-            -       If you are ready to learn more about studying in Australia, contact us today to talk to an education expert! 
-        </p>
+  <!-- Popular Courses  -->
+  <div class="mb-8 flex flex-col items-start gap-4">
+    <h6
+      class="font-semibold text-4xl text-black py-6 "
+    >
+      Top Courses in Australia
+    </h6>
+    <div class="flex flex-col gap-3 mt-4">
+      <h6 class="font-[500] text-xl text-black">VET Courses/TAFE Course</h6>
+      <p class="text-base font-[400] text-black">
+        VET (Vocational Education and Training) and TAFE (Technical and Further
+        Education) courses provide specialized, practical training to equip
+        individuals with skills for specific industries or professions.
+      </p>
     </div>
-
-    
-
-      <!-- Popular Courses  -->
-    <div class="mb-8 flex flex-col items-start gap-4">
-        <h6 class="font-semibold text-4xl text-black py-6 border-b-[2px] border-black">Top Courses in Australia</h6>
-        <div class="flex flex-col gap-3 mt-4">
-            <h6 class="font-[500] text-xl text-black">VET Courses/TAFE Course</h6>
-            <p class="text-base font-[400] text-black">
-                VET (Vocational Education and Training) and TAFE (Technical and Further Education) courses provide specialized, practical training to equip individuals with skills for specific industries or professions.
-            </p>
-        </div>
-        <div class="flex flex-col gap-3 mt-4">
-            <h6 class="font-[500] text-xl text-black">Hospitality & Management Courses </h6>
-             <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
-                {
-                    ["Commercial Cookery","Patisserie & Kitchen Management","Event Management","Hospitality Management"]
-                    .map((data) => 
-                    <div class="flex flex-col relative group overflow-hidden">
-                        <img 
-                            src="https://thesavvyimg.co.uk/wp-content/uploads/2022/08/img-crash-course-gmc-registration-1024x576.png" 
-                            alt="course image" 
-                            class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
-                        >
-                        <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
-                            <p class="text-xl font-[500] text-white px-4 py-2 text-center">{data}</p>
-                        </div>
-                    </div>
-                    )
-                }
+    <div class="flex flex-col gap-3 mt-4">
+      <h6 class="font-[500] text-xl text-black">
+        Hospitality & Management Courses
+      </h6>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
+        {
+         hospitalAndManagementCourses?.map((data) => (
+            <div class="flex flex-col relative group overflow-hidden">
+              <img
+                src={data?.image}
+                alt="course image"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+              />
+              <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
+                <p class="text-xl font-[500] text-white px-4 py-2 text-center">
+                  {data?.title}
+                </p>
+              </div>
             </div>
-        </div>
-        <div class="flex flex-col gap-3 mt-4">
-            <h6 class="font-[500] text-xl text-black">Aged Care & Community Services Courses</h6>
-             <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
-                {
-                    ["Ageing Support","Childcare"," Individual Support","Community Services "]
-                    .map((data) => 
-                    <div class="flex flex-col relative group overflow-hidden">
-                        <img 
-                            src="https://thesavvyimg.co.uk/wp-content/uploads/2022/08/img-crash-course-gmc-registration-1024x576.png" 
-                            alt="course image" 
-                            class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
-                        >
-                        <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
-                            <p class="text-xl font-[500] text-white px-4 py-2 text-center">{data}</p>
-                        </div>
-                    </div>
-                    )
-                }
-            </div>
-        </div>
-        <div class="flex flex-col gap-3 mt-4">
-            <h6 class="font-[500] text-xl text-black">Business & Finance</h6>
-             <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
-                {
-                    ["Accounting"," Project Management","Entrepreneurship","Business"]
-                    .map((data) => 
-                    <div class="flex flex-col relative group overflow-hidden">
-                        <img 
-                            src="https://thesavvyimg.co.uk/wp-content/uploads/2022/08/img-crash-course-gmc-registration-1024x576.png" 
-                            alt="course image" 
-                            class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
-                        >
-                        <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
-                            <p class="text-xl font-[500] text-white px-4 py-2 text-center">{data}</p>
-                        </div>
-                    </div>
-                    )
-                }
-            </div>
-        </div>
-        <div class="flex flex-col gap-3 mt-4">
-            <h6 class="font-[500] text-xl text-black">Business & Finance</h6>
-             <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
-                {
-                    ["Carpentry, Joinery & Shopfitting","Construction Waterproofing","Furniture Making & Design ","Business"]
-                    .map((data) => 
-                    <div class="flex flex-col relative group overflow-hidden">
-                        <img 
-                            src="https://thesavvyimg.co.uk/wp-content/uploads/2022/08/img-crash-course-gmc-registration-1024x576.png" 
-                            alt="course image" 
-                            class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
-                        >
-                        <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
-                            <p class="text-xl font-[500] text-white px-4 py-2 text-center">{data}</p>
-                        </div>
-                    </div>
-                    )
-                }
-            </div>
-        </div>
+          ))
+        }
+      </div>
     </div>
+    <div class="flex flex-col gap-3 mt-4">
+      <h6 class="font-[500] text-xl text-black">
+        Aged Care & Community Services Courses
+      </h6>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
+        {
+          ageCareAndServiceCourses?.map((data) => (
+            <div class="flex flex-col relative group overflow-hidden">
+              <img
+                src={data?.image}
+                alt="course image"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+              />
+              <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
+                <p class="text-xl font-[500] text-white px-4 py-2 text-center">
+                  {data?.title}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 mt-4">
+      <h6 class="font-[500] text-xl text-black">Business & Finance</h6>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
+        {
+          businessAndFinanceCourses?.map((data) => (
+            <div class="flex flex-col relative group overflow-hidden">
+              <img
+                src={data?.image}
+                alt="course image"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+              />
+              <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
+                <p class="text-xl font-[500] text-white px-4 py-2 text-center">
+                  {data?.title}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 mt-4">
+      <h6 class="font-[500] text-xl text-black">Business & Finance</h6>
+      <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-2 mt-2">
+        {
+          otherCourses?.map((data) => (
+            <div class="flex flex-col relative group overflow-hidden">
+              <img
+                src={data?.image}
+                alt="course image"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+              />
+              <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
+                <p class="text-xl font-[500] text-white px-4 py-2 text-center">
+                  {data?.title}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>
