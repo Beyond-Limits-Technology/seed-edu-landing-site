@@ -1,7 +1,7 @@
 const NavbarItem = ({ data, isScrollActive }) => {
   return (
-    <div className="h-full flex justify-center items-center">
-      <div className="flex items-center gap-2 py-2 group">
+    <div className="h-full flex justify-center items-center hover:border-b-primary-500 hover:border-b-4 group">
+      <div className="flex items-center gap-2 py-2 ">
         <div className="flex items-center gap-2 overflow-hidden max-h-[80px]">
           <a
             href={data.link}
@@ -11,25 +11,10 @@ const NavbarItem = ({ data, isScrollActive }) => {
           >
             {data.name}
           </a>
-
-          {data.subData.length > 0 && (
-            <svg
-              fill={isScrollActive ? "black" : "white"}
-              xmlns="http://www.w3.org/2000/svg"
-              width="800px"
-              height="800px"
-              viewBox="0 0 52 52"
-              enableBackground="new 0 0 52 52"
-              xmlSpace="preserve"
-              className="w-[14px]"
-            >
-              <path d="M8.3,14h35.4c1,0,1.7,1.3,0.9,2.2L27.3,37.4c-0.6,0.8-1.9,0.8-2.5,0L7.3,16.2C6.6,15.3,7.2,14,8.3,14z" />
-            </svg>
-          )}
         </div>
 
         {data.subData.length > 0 && (
-          <div className="relative -left-[100%] top-4 ">
+          <div className="relative -left-[100%] top-[42px]">
             <div className={`absolute top-0 left-0 `}>
               <div
                 className={`bg-white rounded-md shadow-2xl  flex-col items-start 

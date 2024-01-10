@@ -33,7 +33,7 @@ const Navbar = ({ active }) => {
             />
           </a>
 
-          <div className="h-full lg:flex hidden items-center xl:gap-4 gap-4">
+          <div className="h-full lg:flex hidden items-center xl:gap-6 gap-4">
             {navbarData.map((data) => (
               <NavbarItem
                 isScrollActive={isScrollActive}
