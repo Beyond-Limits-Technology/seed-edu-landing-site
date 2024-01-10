@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Posts from "../../../layouts/Posts.astro";
-import getPagination from "../../../utils/getPagination";
+import Posts from "@layouts/Posts.astro";
+import getPagination from "@utils/getPagination";
 
 const allPosts = await getCollection("posts");
 

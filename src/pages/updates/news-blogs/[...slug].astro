@@ -1,11 +1,11 @@
 ---
 import { getCollection } from "astro:content";
 
-import NewsAndBlogDetails from "../../../components/updates/news-Blogs/content/NewsAndBlogDetails.astro";
-import getPageNumbers from "../../../utils/getPageNumbers";
-import getSortedPosts from "../../../utils/getSortedPosts";
-import getPagination from "../../../utils/getPagination";
-import Posts from "../../../layouts/Posts.astro";
+import NewsAndBlogDetails from "@components/updates/news-Blogs/content/NewsAndBlogDetails.astro";
+import getPageNumbers from "@utils/getPageNumbers";
+import getSortedPosts from "@utils/getSortedPosts";
+import getPagination from "@utils/getPagination";
+import Posts from "@layouts/Posts.astro";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
