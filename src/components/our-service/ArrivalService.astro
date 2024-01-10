@@ -1,0 +1,61 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section class="">
+  <!-- Container -->
+  <div class="bg-primary-100 text-black pb-4">
+    <div
+      class="mx-auto mb-8 pt-[82px] flex max-w-3xl flex-col items-center text-center md:mb-12 lg:mb-16"
+      id="applying-student-visa"
+    >
+      <h2 class="text-3xl font-bold">Pre-departure and Post-arrival</h2>
+      <p
+        class="mx-auto mb-8 mt-4 max-w-sm md:max-w-xl lg:max-w-3xl text-base text-[#636262] md:mb-12 md:text-lg lg:mb-16"
+      >
+        Remember that preparation is key to a smooth transition, and being aware
+        of the following factors will contribute to a positive and enjoyable
+        experience abroad.
+      </p>
+    </div>
+  </div>
+  <div>
+    <!-- Component -->
+
+    <div class="relative">
+      <ServiceCard
+        id={7}
+        stepName=" Pre-departure and Post-arrival"
+        image="https://images.unsplash.com/photo-1698594691362-d40d565268cf?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Key to a smooth transition"
+        description=""
+        features={[
+          "Visa and Documentations.",
+          "Health Insurance",
+          "Finances",
+          "Accommodation",
+          "Cultural Understanding",
+          "Emergency Contacts",
+          "Local Transportation",
+          "Weather and Clothing",
+          "Social Network",
+          "Local Laws and Regulations",
+          "Personal Safety",
+        ]}
+      />
+
+      <ServiceCard
+        id={8}
+        stepName="Bring your family to Australia"
+        image="https://images.unsplash.com/photo-1536010305525-f7aa0834e2c7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        header="Bring your family to Australia"
+        description="To ease your concerts, we offer pre-departure sessions to inform the above factors, aiming to prepare you for the upcoming changes and challenges. "
+        features={[
+          "Students can add a secondary applicant to their application. It can be a spouse, child or de-facto partner. You can add them when you lodge your application or after a visa grant.",
+          "On the student visa, your spouse or partner would also have the same working rights as you.",
+          "Once you arrive at your destination, we provide post-arrival sessions to make your transaction smoother and help you settle into your new life with ease. ",
+        ]}
+      />
+    </div>
+  </div>
+</section>
