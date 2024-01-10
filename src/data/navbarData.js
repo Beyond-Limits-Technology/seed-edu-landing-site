@@ -89,17 +89,13 @@ export default [
         name: "News & Blogs",
         link: "/updates/news-blogs",
       },
-      // {
-      //   name: "Money Transfer",
-      //   link: "/about-us",
-      // },
-      {
-        name: "FAQs",
-        link: "/updates/faqs",
-      },
       {
         name: "Events",
         link: "/updates/events",
+      },
+      {
+        name: "FAQs",
+        link: "/updates/faqs",
       },
       {
         name: "Privacy Policy",
