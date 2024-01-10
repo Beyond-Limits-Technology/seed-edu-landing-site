@@ -5,7 +5,7 @@ const NavbarItem = ({ data, isScrollActive }) => {
         <div className="flex items-center gap-2 overflow-hidden max-h-[80px]">
           <a
             href={data.link}
-            className={`text-[14px] font-[400]  cursor-pointer tracking-wide ${
+            className={`text-base  font-[400]  cursor-pointer tracking-widest ${
               isScrollActive ? "text-black" : "text-white"
             }`}
           >
