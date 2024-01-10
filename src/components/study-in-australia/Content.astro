@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanceCourses ,otherCourses } from "../../data/coursesData";
 
 ---
@@ -94,11 +95,14 @@ import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanc
         {
          hospitalAndManagementCourses?.map((data) => (
             <div class="flex flex-col relative group overflow-hidden">
-              <img
+              <Image
                 src={data?.image}
                 alt="course image"
-                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full object-cover"
+                width="1280"
+                height="1280"
               />
+             
               <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
                 <p class="text-xl font-[500] text-white px-4 py-2 text-center">
                   {data?.title}
@@ -117,10 +121,12 @@ import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanc
         {
           ageCareAndServiceCourses?.map((data) => (
             <div class="flex flex-col relative group overflow-hidden">
-              <img
+              <Image
                 src={data?.image}
                 alt="course image"
-                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full object-cover"
+                 width="1280"
+                height="1280"
               />
               <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
                 <p class="text-xl font-[500] text-white px-4 py-2 text-center">
@@ -138,10 +144,12 @@ import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanc
         {
           businessAndFinanceCourses?.map((data) => (
             <div class="flex flex-col relative group overflow-hidden">
-              <img
+              <Image
                 src={data?.image}
                 alt="course image"
-                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full object-cover"
+                width="1280"
+                height="1280"
               />
               <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
                 <p class="text-xl font-[500] text-white px-4 py-2 text-center">
@@ -159,10 +167,12 @@ import { hospitalAndManagementCourses,ageCareAndServiceCourses,businessAndFinanc
         {
           otherCourses?.map((data) => (
             <div class="flex flex-col relative group overflow-hidden">
-              <img
+              <Image
                 src={data?.image}
                 alt="course image"
-                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                class="w-full group-hover:scale-110 transition-all duration-300 ease-in-out h-full object-cover"
+                width="1280"
+                height="1280"
               />
               <div class="absolute top-0 left-0 w-full h-full bg-black z-10 bg-opacity-40 flex justify-center items-center">
                 <p class="text-xl font-[500] text-white px-4 py-2 text-center">
