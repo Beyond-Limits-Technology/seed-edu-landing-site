@@ -1,6 +1,7 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
 import Details from "../../../../components/events/Details.astro"
+import ReadyToDiveIn from "../../../../components/common/ReadyToDiveIn.astro";
 
 export function getStaticPaths() {
   return [
@@ -15,4 +16,5 @@ const { id } = Astro.params;
 
 <Layout title="SEED | Events Detail " isNavbarActive>
     <Details />
+    <ReadyToDiveIn />
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Breadcrumb from "../../../components/common/Breadcrumb.astro";
+import ReadyToDiveIn from "../../../components/common/ReadyToDiveIn.astro";
 import EventCard from "../../../components/events/EventCard.astro"
 import Layout from "../../../layouts/Layout.astro";
 
@@ -24,9 +25,11 @@ import Layout from "../../../layouts/Layout.astro";
     </div>
   </div>
 
-  <div class="max-w-4xl mx-auto mt-20 px-5">
+  <div class="max-w-4xl mx-auto py-20 px-5">
     {
       [0,1,2,3,4,5].map(() => <EventCard />)
     }
   </div>
+
+  <ReadyToDiveIn />
 </Layout>
