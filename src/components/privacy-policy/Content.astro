@@ -1,28 +1,43 @@
-<div class="max-w-7xl mx-auto px-5 py-[100px]">
+<div class="max-w-4xl mx-auto px-5 py-[100px]">
     <h6 class="text-4xl font-bold text-black">Privacy Policy</h6>
     <p class="text-base font-[300] text-black mt-2">lasted updated - 29/11/2023</p>
 
     <div class="mt-6">
-        <h6 class="text-xl font-[500] text-black">We Respect Your Privacy</h6>
+        <h6 class="text-xl font-[500] text-black mb-4">We Respect Your Privacy</h6>
         {
-            [0,1,2,3,4].map(() => <p class="text-base font-[400] text-black mt-4 tracking-wide">
+            [0,1,2,3,4].map((data,i) =>
+             <div class="flex items-start gap-4 mb-4 ">
+                   <div class="flex flex-col items-center h-full gap-2">
+                         <div class="min-w-[30px] h-[30px] bg-primary-500 rounded-full flex justify-center items-center text-white">{i + 1}</div>
+                         <div class="h-[50px] w-[1px] bg-primary-500 opacity-50"/>
+                    </div>
+                    <p class="text-base font-[400] text-black tracking-wide">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti et facilis nobis dolor fugit, optio quis culpa. Quia necessitatibus, 
             dignissimos voluptates consectetur incidunt rerum quas. Velit voluptatem suscipit rem asperiores.
              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti et facilis nobis dolor fugit, optio quis culpa. Quia necessitatibus, 
             dignissimos voluptates consectetur incidunt rerum quas. Velit voluptatem suscipit rem asperiores.
              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti et facilis nobis dolor fugit, optio quis culpa. Quia necessitatibus, 
             dignissimos voluptates consectetur incidunt rerum quas. Velit voluptatem suscipit rem asperiores.
-        </p>)
+        </p>
+                </div>)
+        }
+       
+    </div>
+
+     <div class="mt-6 ">
+        <h6 class="text-xl font-[500] text-black ">Other Informations</h6>
+        {
+            [0,1,2,3,4].map(() => <div class="text-base font-[400] text-black mt-4 tracking-wide ">
+           <div>
+             <img src="/assets/icons/check-circle.svg" alt="check-circle" class="min-w-[20px] h-[20px] mb-[6px] inline" />  
+            <span class="font-bold text-lg">This is test title </span> 
+            </div>
+          <p>  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, omnis enim? Dicta neque ipsa accusantium, assumenda, a asperiores omnis, 
+            consectetur sapiente eaque aliquam ratione commodi laborum culpa numquam molestias totam.</p>
+        </div>)
         }
     </div>
 
-     <div class="mt-6">
-        <h6 class="text-xl font-[500] text-black underline">Other Informations</h6>
-        {
-            [0,1,2,3,4].map(() => <p class="text-base font-[400] text-black mt-4 tracking-wide">
-            - <span class="font-bold text-lg">This is test title : </span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum, omnis enim? Dicta neque ipsa accusantium, assumenda, a asperiores omnis, 
-            consectetur sapiente eaque aliquam ratione commodi laborum culpa numquam molestias totam.
-        </p>)
-        }
-    </div>
+
 </div>
+

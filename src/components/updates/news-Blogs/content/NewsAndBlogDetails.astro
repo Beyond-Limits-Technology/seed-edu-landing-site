@@ -1,5 +1,6 @@
 ---
 import Layout from "../../../../layouts/Layout.astro";
+import ReadyToDiveIn from "../../../common/ReadyToDiveIn.astro";
 const { title, post, date, description, author, image, postId, tags } =
   Astro.props;
 
@@ -125,4 +126,6 @@ const { Content } = await post.render();
       </div>
     </div>
   </aside>
+
+  <ReadyToDiveIn />
 </Layout>

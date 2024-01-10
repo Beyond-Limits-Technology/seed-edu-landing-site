@@ -27,7 +27,9 @@ const { title, isNavbarActive = false } = Astro.props;
   </head>
   <body class="font-switzer">
     <Navbar client:only active={isNavbarActive} />
+    
     <slot />
+    
     <Footer />
 
     <!-- Messenger Chat Plugin Code -->
