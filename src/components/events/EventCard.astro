@@ -6,8 +6,18 @@ const { title, date, description, image, eventId, tags } = Astro.props;
 <div
   class="w-full flex justify-between md:flex-row flex-col-reverse gap-4 items-center py-8 border-b border-black border-opacity-10 cursor-pointer"
 >
-  <div class="max-w-sm h-full rounded-md overflow-hidden md:mb-0 mb-4">
-    <img src={image} alt={image?.alt || "events"} class="w-full object-cover" />
+  <div
+    class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
+  >
+    <img
+      src={image}
+      alt={image?.alt || "events"}
+      class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover"
+    />
+    <div
+      class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"
+    >
+    </div>
   </div>
 
   <div class="flex flex-col gap-y-2">
