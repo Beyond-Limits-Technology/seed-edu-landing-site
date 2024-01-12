@@ -2,6 +2,7 @@ export default [
   {
     name: "Home",
     link: "/",
+    forceRefresh: true,
     subData: [
       {
         name: "Our Service",
@@ -33,7 +34,7 @@ export default [
   },
   {
     name: "Guides",
-    link: undefined,
+    link: "/guides/study-in-australia",
     subData: [
       {
         name: "Study In Australia",
@@ -43,7 +44,7 @@ export default [
   },
   {
     name: "Study Abroad",
-    link: undefined,
+    link: "/study-in-australia",
     subData: [
       {
         name: "Study In Australia",
@@ -61,7 +62,7 @@ export default [
   },
   {
     name: "Essentials",
-    link: undefined,
+    link: "/essentials/oversea-student-health-cover",
     subData: [
       {
         name: "Oversea Student Health Cover (OSHC)",
@@ -83,7 +84,7 @@ export default [
   },
   {
     name: "Updates",
-    link: undefined,
+    link: "/updates/news-blogs",
     subData: [
       {
         name: "News & Blogs",

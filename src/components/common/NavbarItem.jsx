@@ -3,14 +3,25 @@ const NavbarItem = ({ data, isScrollActive }) => {
     <div className="h-full flex justify-center items-center hover:border-b-primary-500 hover:border-b-4 group">
       <div className="flex items-center gap-2 py-2 ">
         <div className="flex items-center gap-2 overflow-hidden max-h-[80px]">
-          <a
-            href={data.link}
-            className={`text-base  font-[400]  cursor-pointer tracking-widest ${
-              isScrollActive ? "text-black" : "text-white"
-            }`}
-          >
-            {data.name}
-          </a>
+          {data?.forceRefresh ? (
+            <p
+              onClick={() => window.open("/", "_self")}
+              className={`text-base  font-[400]  cursor-pointer tracking-widest ${
+                isScrollActive ? "text-black" : "text-white"
+              }`}
+            >
+              {data.name}
+            </p>
+          ) : (
+            <a
+              href={data.link}
+              className={`text-base  font-[400]  cursor-pointer tracking-widest ${
+                isScrollActive ? "text-black" : "text-white"
+              }`}
+            >
+              {data.name}
+            </a>
+          )}
         </div>
 
         {data.subData.length > 0 && (
