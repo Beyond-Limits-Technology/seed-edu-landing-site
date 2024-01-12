@@ -3,19 +3,23 @@ const { data } = Astro.props;
 ---
 
 <div class="sm:max-w-sm w-full rounded overflow-hidden shadow-xl bg-white">
-  <img class="w-full h-48 object-cover" src={data.image} alt="Event Image" />
+  <img
+    class="w-full h-48 object-cover"
+    src={data.data.image.url}
+    alt="Event Image"
+  />
   <div class="px-6 py-4">
-    <div class="font-[600] text-xl mb-2">{data.title}</div>
+    <div class="font-[600] text-xl mb-2">{data.data.title}</div>
     <p class="text-gray-700 text-base font-[500]">
-      Date and Time: {data.date}
+      Date and Time: {data.data.date}
     </p>
     <p class="text-gray-700 text-base whitespace-normal font-[400]">
-      {data.description}
+      {data.data.description?.slice(0, 100) + "..." || "No description"}
     </p>
   </div>
   <div class="px-6 py-4 mb-4">
     <a
-      href="/updates/events"
+      href=`/updates/events/${data.slug}`
       class="bg-dark-500 hover:bg-dark-300 text-white font-bold py-2 px-4 rounded"
     >
       Learn More
