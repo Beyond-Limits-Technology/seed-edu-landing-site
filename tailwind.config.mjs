@@ -40,6 +40,10 @@ export default {
       },
       fontFamily: {
         switzer: ["Switzer", "sans-serif"],
+        worksans: ["Work Sans", "sans-serif"],
+        cabinetgrotesk: ["Cabinet Grotesk", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

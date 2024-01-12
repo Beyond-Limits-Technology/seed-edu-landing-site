@@ -1,10 +1,19 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../../../../layouts/Layout.astro";
 import ReadyToDiveIn from "../../../common/ReadyToDiveIn.astro";
+import getSortedPosts from "@utils/getSortedPosts";
 const { title, post, date, description, author, image, postId, tags } =
   Astro.props;
 
 const { Content } = await post.render();
+
+const allArticles = await getCollection("posts");
+const sortedArticles = getSortedPosts(allArticles);
+
+const relatedArticles = sortedArticles.filter(
+  (article) => article.id !== post.id
+);
 ---
 
 <Layout title={title} isNavbarActive={true}>
@@ -35,7 +44,30 @@ const { Content } = await post.render();
         Related articles
       </h2>
       <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-        <article class="max-w-xs mx-auto">
+        {
+          relatedArticles?.slice(0, 4).map((article) => (
+            <article class="max-w-xs mx-auto">
+              <a href="#">
+                <img
+                  src={article.data.image.url}
+                  class="mb-5 rounded-lg"
+                  alt="Image 1"
+                />
+              </a>
+              <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
+                <a href="#">{article.data.title}</a>
+              </h2>
+              <p class="mb-4 text-gray-500">{article.data.description}</p>
+              <a
+                href={`/updates/news-blogs/${article.slug}`}
+                class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline"
+              >
+                Read in 2 minutes
+              </a>
+            </article>
+          ))
+        }
+        <!-- <article class="max-w-xs mx-auto">
           <a href="#">
             <img
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png"
@@ -122,7 +154,7 @@ const { Content } = await post.render();
           >
             Read in 4 minutes
           </a>
-        </article>
+        </article> -->
       </div>
     </div>
   </aside>

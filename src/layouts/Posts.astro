@@ -12,8 +12,6 @@ export interface Props {
   paginatedPosts: CollectionEntry<"posts">[];
 }
 
-export async function getStaticPaths({ paginate }) {}
-
 const { currentPage, totalPages, paginatedPosts } = Astro.props;
 ---
 
@@ -39,10 +37,10 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:max-w-4xl">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          News And Articles
+          News And Blogs
         </h2>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Our curated articles cover a spectrum of topics, from study tips and
+          Our curated blogs cover a spectrum of topics, from study tips and
           career advice to the latest trends in technology and education.
         </p>
 
