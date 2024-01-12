@@ -1,6 +1,8 @@
 ---
 import studyPlanFees from "../../data/studyPlanFees";
 import GuideStepper from "../../components/guides/GuideStepper";
+import LivingCosts from "./LivingCosts.md";
+import livingCosts from "data/livingCosts";
 ---
 
 <div class="max-w-7xl mx-auto md:py-[100px] py-[50px] px-5">
@@ -75,5 +77,52 @@ import GuideStepper from "../../components/guides/GuideStepper";
         }
       </tbody>
     </table>
+
+    <h6 class="text-2xl md:text-4xl mt-12 py-4 font-semibold">Living Costs</h6>
+
+    <p class="text-base text-slate-800">
+      Knowing the average living costs in Australia is an important part of your
+      financial preparation. To get a better idea, check out the Cost of Living
+      per week in the following.
+    </p>
+
+    <table
+      class="w-full text-sm text-left rtl:text-right bg-[#f5f5f5] border mt-6"
+    >
+      <thead class="text-xs text-gray-700">
+        <tr>
+          <th scope="col" class="sm:px-6 px-2 py-6 sm:text-2xl text-lg border">
+            City
+          </th>
+          <th scope="col" class="sm:px-6 px-2 py-6 sm:text-2xl text-lg border">
+            Living Arrangement
+          </th>
+          <th scope="col" class="sm:px-6 px-2 py-6 sm:text-2xl text-lg border">
+            Cost per Week
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          livingCosts.map(({ city, livingArrangement, costPerWeek }, index) => (
+            <tr class={index % 2 === 0 ? "bg-white" : "bg-gray-100"}>
+              <td class="sm:px-6 px-2 py-4 text-gray-900 text-sm sm:text-lg border">
+                {city}
+              </td>
+              <td class="sm:px-6 px-2 py-4 text-sm sm:text-lg border">
+                {livingArrangement || "-"}
+              </td>
+              <td class="sm:px-6 px-2 py-4 text-sm sm:text-lg border">
+                {costPerWeek}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+
+    <article class="prose mx-auto mt-8">
+      <!-- <LivingCosts /> -->
+    </article>
   </div>
 </div>

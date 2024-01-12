@@ -1,6 +1,10 @@
 ---
+import { getCollection } from "astro:content";
 import eventPreviewData from "../../data/eventPreviewData";
 import EventPreviewCard from "./EventPreviewCard.astro";
+
+const event = await getCollection("events");
+console.log(event);
 ---
 
 <div class="w-full py-20 relative isolate px-5">
@@ -41,12 +45,14 @@ import EventPreviewCard from "./EventPreviewCard.astro";
   </p>
   <div class="flex flex-wrap justify-center max-w-7xl mx-auto gap-4 py-4 mt-16">
     {
-      eventPreviewData.map((data) => (
-        <EventPreviewCard
-          class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4"
-          data={data}
-        />
-      ))
+      event
+        ?.slice(0, 3)
+        .map((data) => (
+          <EventPreviewCard
+            class="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4"
+            data={data}
+          />
+        ))
     }
   </div>
 </div>

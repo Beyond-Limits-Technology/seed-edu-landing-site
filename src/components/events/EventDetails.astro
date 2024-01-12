@@ -42,7 +42,7 @@ const relatedEvents = sortedEvents.filter((e) => e.id !== event.id);
           relatedEvents?.slice(0, 4).map((event) => {
             return (
               <article class="max-w-xs mx-auto">
-                <a href="#">
+                <a href={`/updates/events/${event.slug}`}>
                   <img
                     src={event.data.image.url}
                     class="mb-5 rounded-lg"
@@ -50,7 +50,9 @@ const relatedEvents = sortedEvents.filter((e) => e.id !== event.id);
                   />
                 </a>
                 <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900">
-                  <a href="#">{event.data.title}</a>
+                  <a href={`/updates/events/${event.slug}`}>
+                    {event.data.title}
+                  </a>
                 </h2>
                 <p class="mb-4 text-gray-500">{event.data.description}</p>
                 <a
