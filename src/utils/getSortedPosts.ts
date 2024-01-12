@@ -6,4 +6,10 @@ const getSortedPosts = (posts: CollectionEntry<"posts">[]) => {
   });
 };
 
+export const getSortedEvents = (events: CollectionEntry<"events">[]) => {
+  return events.sort((a, b) => {
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  });
+};
+
 export default getSortedPosts;

@@ -17,7 +17,7 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,12 +28,23 @@ const {
       href="https://api.fontshare.com/v2/css?f[]=switzer@800,900,700,400,500&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <meta name="generator" content={Astro.generator} />
 
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="font-switzer">
+  <body class="font-lato">
     {!hideNavbar && <Navbar client:only active={isNavbarActive} />}
 
     <slot />
