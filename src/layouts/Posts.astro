@@ -54,8 +54,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
                     title={post.data.title}
                     description={post.data.description}
                     image={post.data.image.url}
-                    date={post.data.date}
-                    postId={post.slug}
+                    date={post.data.date.toString()}
+                    postId={post?.data?.link || post.slug}
                     tags={post.data.tags}
                   />
                 </div>

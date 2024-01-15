@@ -13,6 +13,7 @@ const blog = defineCollection({
     }),
     postId: z.string(),
     tags: z.string(),
+    link: z.string().optional(),
   }),
 });
 
