@@ -5,7 +5,7 @@ const NavbarItem = ({ data, isScrollActive }) => {
         <div className="flex items-center gap-2 overflow-hidden max-h-[80px]">
           {data?.forceRefresh ? (
             <p
-              onClick={() => window.open("/", "_self")}
+              onClick={() => window.open(data.link, "_self")}
               className={`text-base  font-[400]  cursor-pointer tracking-widest ${
                 isScrollActive ? "text-black" : "text-white"
               }`}
