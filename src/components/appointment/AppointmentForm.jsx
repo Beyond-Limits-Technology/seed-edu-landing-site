@@ -45,6 +45,7 @@ const AppointmentForm = () => {
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="first-name"
                         id="first-name"
@@ -62,6 +63,7 @@ const AppointmentForm = () => {
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="last-name"
                         id="last-name"
@@ -79,6 +81,7 @@ const AppointmentForm = () => {
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         id="email"
                         name="email"
                         type="email"
@@ -96,6 +99,7 @@ const AppointmentForm = () => {
                     </label>
                     <div className="mt-2.5">
                       <input
+                        required
                         type="text"
                         name="phonenumber"
                         id="phonenumber"
@@ -122,6 +126,8 @@ const AppointmentForm = () => {
                         id="message"
                         name="message"
                         rows="4"
+                        required
+                        maxLength={500}
                         aria-describedby="message-description"
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                       ></textarea>
@@ -135,8 +141,9 @@ const AppointmentForm = () => {
                       <div className="flex gap-x-2.5">
                         <input
                           id="yes"
+                          required
                           name="isCurrentlyInAustralia"
-                          value="true"
+                          value="yes"
                           type="radio"
                           className="mt-1 h-4 w-4 border-gray-300 text-primary-600 shadow-sm focus:ring-primary-600"
                         />
@@ -145,8 +152,9 @@ const AppointmentForm = () => {
                       <div className="flex gap-x-2.5">
                         <input
                           id="no"
+                          required
                           name="isCurrentlyInAustralia"
-                          value="false"
+                          value="no"
                           type="radio"
                           className="mt-1 h-4 w-4 border-gray-300 text-primary-600 shadow-sm focus:ring-primary-600"
                         />
@@ -165,6 +173,7 @@ const AppointmentForm = () => {
                     <div className="mt-2.5">
                       <select
                         id="country"
+                        required
                         name="country"
                         className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
                       >
