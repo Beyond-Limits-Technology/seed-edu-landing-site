@@ -11,10 +11,13 @@ type Props = {
 };
 
 const { image, title, date, description, tags, postId } = Astro.props as Props;
+const href = postId.startsWith("https://")
+  ? `${postId}`
+  : `/updates/news-blogs/${postId}`;
 ---
 
 <article class="relative isolate flex flex-col gap-8 lg:flex-row">
-  <a href={`/updates/news-blogs/${postId}`}>
+  <a href={href}>
     <div
       class="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0"
     >
@@ -43,7 +46,7 @@ const { image, title, date, description, tags, postId } = Astro.props as Props;
         <h3
           class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
         >
-          <a href=`/updates/news-blogs/${postId}`>
+          <a href={href}>
             <span class="absolute inset-0"></span>
             {title}
           </a>
