@@ -34,6 +34,11 @@ const AppointmentForm = () => {
                 action="https://formsubmit.co/codetest.cr@gmail.com"
                 method="POST"
               >
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.seededuau.com.au/"
+                ></input>
                 <input type="hidden" name="_template" value="table" />
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
