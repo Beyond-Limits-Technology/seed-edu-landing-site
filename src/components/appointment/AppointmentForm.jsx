@@ -31,7 +31,7 @@ const AppointmentForm = () => {
               </p>
               <form
                 className="mt-16"
-                action="https://formsubmit.co/dennykate22@gmail.com"
+                action="https://formsubmit.co/codetest.cr@gmail.com"
                 method="POST"
               >
                 <input type="hidden" name="_template" value="table" />
