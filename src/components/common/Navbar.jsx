@@ -25,13 +25,12 @@ const Navbar = ({ active }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto h-full  flex justify-between items-center lg:px-2 px-2">
-          <a href="/">
-            <img
-              src="/assets/logos/seed-logo-golden.png"
-              alt="logo"
-              className="w-28"
-            />
-          </a>
+          <img
+            src="/assets/logos/seed-logo-golden.png"
+            alt="logo"
+            className="w-28 cursor-pointer"
+            onClick={() => window.open("/", "_self")}
+          />
 
           <div className="h-full lg:flex hidden items-center xl:gap-6 gap-4">
             {navbarData.map((data) => (
