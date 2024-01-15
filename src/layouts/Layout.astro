@@ -17,32 +17,49 @@ const {
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=switzer@800,900,700,400,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>SEED Education</title>
+    <meta name="title" content="SEED Education" />
+    <meta
+      name="description"
+      content="SEED Education was founded by a team of graduates from Australian universities, who have navigated the challenges and opportunities of their own education journeys, understand the concerns students may face."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.seededuau.com.au/" />
+    <meta property="og:title" content="SEED Education" />
+    <meta
+      property="og:description"
+      content="SEED Education was founded by a team of graduates from Australian universities, who have navigated the challenges and opportunities of their own education journeys, understand the concerns students may face."
+    />
+    <meta property="og:image" content="/assets/logos/seed-logo-golden.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.seededuau.com.au/" />
+    <meta property="twitter:title" content="SEED Education" />
+    <meta
+      property="twitter:description"
+      content="SEED Education was founded by a team of graduates from Australian universities, who have navigated the challenges and opportunities of their own education journeys, understand the concerns students may face."
+    />
+    <meta
+      property="twitter:image"
+      content="/assets/logos/seed-logo-golden.png"
     />
 
     <meta name="generator" content={Astro.generator} />
