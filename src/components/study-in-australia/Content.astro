@@ -6,6 +6,7 @@ import {
   businessAndFinanceCourses,
   otherCourses,
 } from "../../data/coursesData";
+import auEduDescs from "data/auEduDescs";
 ---
 
 <div class="sm:py-[50px] py-[20px] relative">
@@ -51,33 +52,31 @@ import {
       <h6 class="font-semibold text-3xl text-black py-6">
         Australian Education
       </h6>
-      <p class="text-base font-[400] text-black">
-        • Australia has many study options for international students, with over
-        1,100 institutions and 22,000 courses. The education system includes
-        primary, secondary, and tertiary levels, guided by the Australian
-        Qualifications Framework (AQF), which shows how qualifications connect
-        at each education level.
-      </p>
-      <p class="text-base font-[400] text-black">
-        • International students can study at all levels, from primary school to
-        higher education. Tertiary education in Australia includes universities
-        and vocational education and training (VET) or TAFE colleges.
-      </p>
-      <p class="text-base font-[400] text-black">
-        • For quality assurance, there are organizations like TEQSA for higher
-        education and ASQA for VET institutions. They handle registration and
-        accreditation matters.
-      </p>
-      <p class="text-base font-[400] text-black">
-        • Australia’s Laws ensure quality education and protection for
-        international students, including the ESOS Act 2000 and the National
-        Code of Practice for Overseas Students 2007. These set consistent
-        standards for education providers.
-      </p>
-      <p class="text-base font-[400] text-black">
-        • If you are ready to learn more about studying in Australia, contact us
-        today to talk to an education expert!
-      </p>
+      {
+        auEduDescs?.map((data) =>  <div class="flex items-start justify-start gap-4">
+        <span class=" flex items-center justify-center min-w-[18px] h-[18px] bg-primary-400 rounded-full ring-4 ring-white mt-[2px]">
+                  <svg
+                    class="sm:w-2.5 sm:h-2.5 w-1.5 h-1.5 text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 16 12"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5.917 5.724 10.5 15 1.5"
+                    />
+                  </svg>
+                </span>
+        <p class="text-base font-[400] text-black">
+       {data?.label}
+        </p>
+      </div>)
+      }
+     
     </div>
 
     <!-- Popular Courses  -->
