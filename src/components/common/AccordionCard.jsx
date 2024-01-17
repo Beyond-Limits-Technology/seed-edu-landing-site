@@ -32,7 +32,9 @@ const AccordionCard = ({ title, answer, index, value, callback }) => {
           value === index ? "max-h-[100rem]" : "max-h-[0rem]"
         }`}
       >
-        {answer}
+        {answer?.split("\n").map((a) => (
+          <p key={a}>{a}</p>
+        ))}
       </div>
     </>
   );

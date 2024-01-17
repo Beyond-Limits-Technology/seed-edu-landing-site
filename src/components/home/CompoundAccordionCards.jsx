@@ -1,15 +1,15 @@
 import { useState } from "react";
 import AccordionCard from "../common/AccordionCard";
-import homeFaqsData from "../../data/homeFaqsData";
+import FAQs from "data/FAQs";
 
 const CompoundAccordionCard = () => {
   const [show, setShow] = useState(undefined);
   return (
     <>
-      {homeFaqsData.map((data, index) => (
+      {FAQs.slice(0, 4).map((data, index) => (
         <AccordionCard
-          key={index}
-          title={data.title}
+          key={data.id}
+          title={data.question}
           answer={data.answer}
           index={index}
           value={show}
