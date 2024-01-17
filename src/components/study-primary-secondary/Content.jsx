@@ -25,14 +25,11 @@ const Content = () => {
       <div className="mt-6">
         <AccordionCard
           title="Overview"
-          answer={
-            <p>
-              The United States is a popular destination for international
+          answer="
+The United States is a popular destination for international
               students seeking a high-quality education. Explore the diverse
               range of universities, programs, and cultural experiences
-              available in the US
-            </p>
-          }
+              available in the US"
           index={1}
           value={show}
           callback={(index) =>
