@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AccordionCard from "../common/AccordionCard";
 
+// FIX the accordion card answer field since it only accept string.
 const Content = () => {
   const [show, setShow] = useState(undefined);
 
