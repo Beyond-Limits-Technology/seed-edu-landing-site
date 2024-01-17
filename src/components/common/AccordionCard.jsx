@@ -1,4 +1,4 @@
-const AccordionCard = ({ title, answer, index, value, callback }) => {
+const AccordionCard = ({ title, answer = "", index, value, callback }) => {
   return (
     <>
       <h2>
