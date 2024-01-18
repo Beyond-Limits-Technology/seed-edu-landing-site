@@ -1,12 +1,12 @@
 const NavbarItem = ({ data, isScrollActive }) => {
   return (
-    <div className="h-full flex justify-center items-center hover:border-b-primary-500 hover:border-b-4 group">
+    <div className="h-full flex justify-center items-center hover:border-b-primary-500 hover:border-b-4  cursor-pointer group">
       <div className="flex items-center gap-2 py-2 ">
         <div className="flex items-center gap-2 overflow-hidden max-h-[80px]">
           {data?.forceRefresh ? (
             <p
               onClick={() => window.open(data.link, "_self")}
-              className={`text-base  font-[400]  cursor-pointer tracking-widest ${
+              className={`text-base  font-[400]  tracking-widest ${
                 isScrollActive ? "text-black" : "text-white"
               }`}
             >
@@ -15,7 +15,7 @@ const NavbarItem = ({ data, isScrollActive }) => {
           ) : (
             <a
               href={data.link}
-              className={`text-base  font-[400]  cursor-pointer tracking-widest ${
+              className={`text-base  font-[400]  tracking-widest ${
                 isScrollActive ? "text-black" : "text-white"
               }`}
             >
