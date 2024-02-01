@@ -72,10 +72,10 @@ export default [
         name: "Student Accommodation",
         link: "/essentials/student-accommodation",
       },
-      {
-        name: "Student Banking",
-        link: "/essentials/student-banking",
-      },
+      // {
+      //   name: "Student Banking",
+      //   link: "/essentials/student-banking",
+      // },
       // {
       //   name: "Money Transfer",
       //   link: "/about-us",
