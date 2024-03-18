@@ -1,0 +1,171 @@
+<div class="bg-primary-100 py-12 sm:py-16">
+  <div class="mx-auto max-w-6xl px-6 lg:px-8">
+    <!-- grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2 -->
+    <div class="text">
+      <div class="mx-auto w-full lg:mx-0 my-8 text-center">
+        <h2 class="text-2xl font-bold tracking-tight text-black">
+          Acknowledgement
+        </h2>
+
+        <p class="mt-6 text-lg leading-8 text-slate-800 mx-auto">
+          SEED Education acknowledges the Traditional Owners of country
+          throughout Australia and recognises their continuing connection to
+          land, water and culture. We pay our respects to their elders past,
+          present and emerging.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]"
+    id="scrollContainer"
+  >
+    <ul
+      class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+      id="logosContainer"
+    >
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols1.jpg"
+          alt="Aboriginal Symbol 1"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols2.jpg"
+          alt="Aboriginal Symbol 2"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols3.jpg"
+          alt="Aboriginal Symbol 3"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols4.jpg"
+          alt="Aboriginal Symbol 4"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols5.jpg"
+          alt="Aboriginal Symbol 5"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols6.jpg"
+          alt="Aboriginal Symbol 6"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols7.jpg"
+          alt="Aboriginal Symbol 7"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols8.jpg"
+          alt="Aboriginal Symbol 8"
+          class="w-32 h-32"
+        />
+      </li>
+    </ul>
+    <ul
+      class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none"
+      aria-hidden="true"
+      id="logosContainer"
+    >
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols1.jpg"
+          alt="Aboriginal Symbol 1"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols2.jpg"
+          alt="Aboriginal Symbol 2"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols3.jpg"
+          alt="Aboriginal Symbol 3"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols4.jpg"
+          alt="Aboriginal Symbol 4"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols5.jpg"
+          alt="Aboriginal Symbol 5"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols6.jpg"
+          alt="Aboriginal Symbol 6"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols7.jpg"
+          alt="Aboriginal Symbol 7"
+          class="w-32 h-32"
+        />
+      </li>
+      <li>
+        <img
+          src="/assets/aboriginal-symbols/Symbols8.jpg"
+          alt="Aboriginal Symbol 8"
+          class="w-32 h-32"
+        />
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let logosContainer = document.getElementById("logosContainer");
+    let scrollContainer = document.getElementById("scrollContainer");
+
+    logosContainer.insertAdjacentHTML("afterend", logosContainer.outerHTML);
+    (logosContainer.nextSibling as HTMLElement).setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+    scrollContainer.classList.add("mask-container");
+    logosContainer.classList.add(
+      "li-container",
+      "mx-8",
+      "img-container",
+      "animate-infinite-scroll"
+    );
+
+    logosContainer.style.marginLeft = "0px";
+    logosContainer.style.marginRight = "0px";
+  });
+</script>
