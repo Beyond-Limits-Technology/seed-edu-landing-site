@@ -4,8 +4,11 @@ import { testimonials } from "@components/testimonials/testimonials";
 ---
 
 <style is:global>
+  .splide__pagination {
+    bottom: -40px !important;
+  }
   .splide__pagination__page.is-active {
-    background: green !important;
+    background: #ca8a04 !important;
   }
 </style>
 <div
@@ -70,15 +73,12 @@ import { testimonials } from "@components/testimonials/testimonials";
       classes: {
         page: "splide__pagination__page",
       },
+      gap: 10,
     });
-
-    main.on("pagination:mounted", function (data) {});
 
     main.mount();
 
     splidePrev.addEventListener("click", (e) => main.go("-1"));
     splideNext.addEventListener("click", (e) => main.go("+1"));
-
-    console.log("hello");
   });
 </script>
