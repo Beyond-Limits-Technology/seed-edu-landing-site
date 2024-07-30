@@ -1,0 +1,86 @@
+---
+import Item from "@components/testimonials/Item.astro";
+import { testimonials } from "@components/testimonials/testimonials";
+---
+
+<style is:global>
+  .splide__pagination {
+    bottom: -40px !important;
+  }
+  .splide__pagination__page.is-active {
+    background: #ca8a04 !important;
+  }
+</style>
+<div
+  class="w-full flex flex-col items-center justify-center mb-20 mx-auto px-2 md:px-0 bg-[#f2e9d0] py-10"
+>
+  <div class="w-full max-w-5xl bg-white p-4 sm:p-20 rounded-md relative">
+    <div class="mb-10">
+      <h1 class="text-2xl text-center font-semibold text-black">
+        What students say about SEED Education
+      </h1>
+      <div class="bg-primary-500 h-1.5 rounded-full w-24 mx-auto mt-5"></div>
+    </div>
+
+    <div>
+      <div id="testimonials-carousel" class="splide md:px-16">
+        <div class="splide__track">
+          <div class="splide__list">
+            {testimonials.map((data) => <Item testimonialData={data} />)}
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute justify-between w-full top-1/2 left-0 -translate-y-8 hidden md:flex px-9"
+      >
+        <div
+          id="splide-prev"
+          class="text-white cursor-pointer opacity-50 hover:opacity-100"
+        >
+          <img
+            width="64"
+            height="64"
+            src="assets/images/testimonials/chevron-left.svg"
+          />
+        </div>
+        <div
+          id="splide-next"
+          class="text-white cursor-pointer opacity-50 hover:opacity-100"
+        >
+          <img
+            width="64"
+            height="64"
+            src="assets/images/testimonials/chevron-right.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const splidePrev = document.getElementById("splide-prev");
+    const splideNext = document.getElementById("splide-next");
+
+    const main = new Splide("#testimonials-carousel", {
+      type: "loop",
+      pagination: true,
+      autoplay: false,
+      arrows: false,
+      classes: {
+        page: "splide__pagination__page",
+      },
+      gap: 10,
+    });
+
+    main.mount();
+
+    splidePrev.addEventListener("click", (e) => main.go("-1"));
+    splideNext.addEventListener("click", (e) => main.go("+1"));
+  });
+</script>
