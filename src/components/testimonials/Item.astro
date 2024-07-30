@@ -1,0 +1,38 @@
+---
+const { testimonialData } = Astro.props;
+---
+
+<div class="flex flex-col items-center splide__slide">
+  <div class="bg-[#f2e9d0] text-black p-10 rounded-md shadow-sm mt-2">
+    <p class="text-center tracking-widest">
+      {testimonialData.testimonial}
+    </p>
+  </div>
+
+  <div
+    class="w-0 h-0
+  border-l-[20px] border-l-transparent
+  border-t-[20px] border-[#f2e9d0]
+  border-r-[20px] border-r-transparent"
+  >
+  </div>
+
+  <div class="flex flex-col items-center mt-5">
+    <div class="w-28 h-28 rounded-full">
+      <img
+        class="w-full h-full object-cover rounded-full"
+        src={`/assets/images/testimonials/${testimonialData.image}`}
+        alt=""
+      />
+    </div>
+    <div class="text-center mt-2 font-bold">
+      <p class="text-black mt-1 text-lg">Panuwat</p>
+      <p class="text-[#9a9aa3] font-normal text-sm tracking-widest">
+        {testimonialData.major}
+      </p>
+      <p class="text-[#9a9aa3] font-normal text-sm tracking-widest">
+        {testimonialData.university}
+      </p>
+    </div>
+  </div>
+</div>
