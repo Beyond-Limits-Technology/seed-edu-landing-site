@@ -3,7 +3,9 @@ const { testimonialData } = Astro.props;
 ---
 
 <div class="flex flex-col items-center splide__slide">
-  <div class="bg-[#f2e9d0] text-black p-10 rounded-md shadow-sm mt-2">
+  <div
+    class="bg-[#f2e9d0] text-black text-sm sm:text-base px-2 py-5 sm:p-10 rounded-md shadow-sm mt-2"
+  >
     <p class="text-center tracking-widest">
       {testimonialData.testimonial}
     </p>
