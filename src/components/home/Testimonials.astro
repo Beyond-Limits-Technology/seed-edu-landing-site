@@ -70,7 +70,8 @@ import { testimonials } from "@components/testimonials/testimonials";
     const main = new Splide("#testimonials-carousel", {
       type: "loop",
       pagination: true,
-      autoplay: false,
+      autoplay: true,
+      interval: 3000,
       arrows: false,
       classes: {
         page: "splide__pagination__page",
