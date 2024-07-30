@@ -4,7 +4,7 @@ export const testimonials = [
     major: "Advanced Diploma of Civil Construction Design",
     university: "Danford College Melbourne",
     image: "panuwat.png",
-    testimonial: `SEED Education has made a significant impact on my educational journey, and I am grateful for their unwavering support. Their commitment to helping students like me achieve our goals is truly remarkable. Thank you, SEED Education, for making my dreams of studying in Australia a reality.`,
+    testimonial: `I'm Panuwat, currently studying Advanced Diploma of Civil Construction Design at Danford College in Melbourne. SEED Education's assistance has been invaluable, helping me secure course enrollment and obtain a partial scholarship. Their thorough guidance during my visa application made the process stress-free, and my visa was granted without issues. SEED Education's unwavering support and commitment have made my dream of studying in Australia a reality. Thank you, SEED Education, for your remarkable help.`,
   },
 
   {
@@ -12,6 +12,6 @@ export const testimonials = [
     major: "Advanced Diploma of Program Management",
     university: "Lonsdale Institute Melbourne",
     image: "tokio.png",
-    testimonial: `SEED Education's unwavering support and dedication have been invaluable. They never once complained about my numerous inquiries and always made me feel supported and informed. Their commitment to their clients' success is truly commendable. Thank you, SEED Education, for making my journey to further my education abroad a seamless and positive experience.`,
+    testimonial: `I'm Tokio from Thailand. SEED Education has been instrumental in guiding my education journey. They respond promptly to inquiries and genuinely care for their clients, especially international students. They meticulously organized all necessary documents for my visa application, making the process smooth and efficient. I received my visa almost immediately after my health examination. Their unwavering support and dedication have made my experience seamless and positive. Thank you, SEED Education, for your outstanding commitment to my success.`,
   },
 ];
