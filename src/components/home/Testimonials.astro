@@ -3,10 +3,15 @@ import Item from "@components/testimonials/Item.astro";
 import { testimonials } from "@components/testimonials/testimonials";
 ---
 
+<style is:global>
+  .splide__pagination__page.is-active {
+    background: green !important;
+  }
+</style>
 <div
   class="w-full flex flex-col items-center justify-center mb-20 mx-auto px-2 md:px-0 bg-[#f2e9d0] py-10"
 >
-  <div class="max-w-5xl bg-white p-4 sm:p-20 rounded-md">
+  <div class="w-full max-w-5xl bg-white p-4 sm:p-20 rounded-md">
     <div class="mb-10">
       <h1 class="text-2xl text-center font-semibold text-black">
         What students say about SEED Education
@@ -14,11 +19,36 @@ import { testimonials } from "@components/testimonials/testimonials";
       <div class="bg-primary-500 h-1.5 rounded-full w-24 mx-auto mt-5"></div>
     </div>
 
-    <div id="testimonials-carousel" class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {testimonials.map((data) => <Item testimonialData={data} />)}
-        </ul>
+    <div class="relative">
+      <div id="testimonials-carousel" class="splide md:px-12">
+        <div class="splide__track">
+          <div class="splide__list">
+            {testimonials.map((data) => <Item testimonialData={data} />)}
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute justify-between w-full top-1/2 hidden md:flex">
+        <div
+          id="splide-prev"
+          class="bg-gray-300 white py-2.5 px-2.5 rounded-full text-white cursor-pointer"
+        >
+          <img
+            width="12"
+            height="12"
+            src="assets/images/testimonials/chevron-left.svg"
+          />
+        </div>
+        <div
+          id="splide-next"
+          class="bg-gray-300 white py-2.5 px-2.5 rounded-full text-white cursor-pointer"
+        >
+          <img
+            width="12"
+            height="12"
+            src="assets/images/testimonials/chevron-right.svg"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -29,12 +59,26 @@ import { testimonials } from "@components/testimonials/testimonials";
   import Splide from "@splidejs/splide";
 
   document.addEventListener("DOMContentLoaded", function () {
+    const splidePrev = document.getElementById("splide-prev");
+    const splideNext = document.getElementById("splide-next");
+
     const main = new Splide("#testimonials-carousel", {
       type: "loop",
-      autoplay: true,
-      pagination: false,
-      arrows: true,
+      pagination: true,
+      autoplay: false,
+      arrows: false,
+      classes: {
+        page: "splide__pagination__page",
+      },
     });
+
+    main.on("pagination:mounted", function (data) {});
+
     main.mount();
+
+    splidePrev.addEventListener("click", (e) => main.go("-1"));
+    splideNext.addEventListener("click", (e) => main.go("+1"));
+
+    console.log("hello");
   });
 </script>
