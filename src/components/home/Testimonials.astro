@@ -11,7 +11,8 @@ import { testimonials } from "@components/testimonials/testimonials";
     background: #ca8a04 !important;
   }
 </style>
-<div
+<section
+  id="testimonials"
   class="w-full flex flex-col items-center justify-center mb-20 mx-auto px-2 md:px-0 bg-[#f2e9d0] py-10"
 >
   <div class="w-full max-w-5xl bg-white p-4 sm:p-20 rounded-md relative">
@@ -41,7 +42,7 @@ import { testimonials } from "@components/testimonials/testimonials";
           <img
             width="64"
             height="64"
-            src="assets/images/testimonials/chevron-left.svg"
+            src="/assets/images/testimonials/chevron-left.svg"
           />
         </div>
         <div
@@ -51,37 +52,39 @@ import { testimonials } from "@components/testimonials/testimonials";
           <img
             width="64"
             height="64"
-            src="assets/images/testimonials/chevron-right.svg"
+            src="/assets/images/testimonials/chevron-right.svg"
           />
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <script>
   import "@splidejs/splide/css";
   import Splide from "@splidejs/splide";
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const splidePrev = document.getElementById("splide-prev");
-    const splideNext = document.getElementById("splide-next");
+  document.addEventListener("astro:page-load", () => {
+    if (window.location.pathname === "/") {
+      const splidePrev = document.getElementById("splide-prev");
+      const splideNext = document.getElementById("splide-next");
 
-    const main = new Splide("#testimonials-carousel", {
-      type: "loop",
-      pagination: true,
-      autoplay: true,
-      interval: 3000,
-      arrows: false,
-      classes: {
-        page: "splide__pagination__page",
-      },
-      gap: 10,
-    });
+      const main = new Splide("#testimonials-carousel", {
+        type: "loop",
+        pagination: true,
+        autoplay: true,
+        interval: 3000,
+        arrows: false,
+        classes: {
+          page: "splide__pagination__page",
+        },
+        gap: 10,
+      });
 
-    main.mount();
+      main.mount();
 
-    splidePrev.addEventListener("click", (e) => main.go("-1"));
-    splideNext.addEventListener("click", (e) => main.go("+1"));
+      splidePrev.addEventListener("click", (e) => main.go("-1"));
+      splideNext.addEventListener("click", (e) => main.go("+1"));
+    }
   });
 </script>
